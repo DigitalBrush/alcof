@@ -7138,7 +7138,8 @@ jQuery(function ($) {
   if (window.matchMedia("(max-width: 767px)").matches) {
     $('.category-section').addClass('owl-carousel owl-theme category-carousel');
   } else {}
-
+});
+jQuery(document).ready(function () {
   var $ = jQuery;
 
   if ($('.set_custom_images').length > 0) {

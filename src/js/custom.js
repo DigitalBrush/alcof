@@ -91,7 +91,9 @@ jQuery(function($){
     } else { 
         
     } 
+});
 
+jQuery(document).ready(function() {
     var $ = jQuery;
     if ($('.set_custom_images').length > 0) {
         if ( typeof wp !== 'undefined' && wp.media && wp.media.editor) {
@@ -107,9 +109,6 @@ jQuery(function($){
             });
         }
     }
-
-
 });
-
 
 
