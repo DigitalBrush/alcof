@@ -45,8 +45,10 @@
                 }
             }
             .slider-body {
-                color: $alcof-gray;
-                max-width: 400px;
+                color: $alcof-charcoal;
+                max-width: 483px;
+                font-size: 18px;
+                line-height: 31.96px;
             }
             @include media-breakpoint-down(xs) {
                 padding: $spacing-lg;

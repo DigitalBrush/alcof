@@ -68,7 +68,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<?php esc_html_e( 'Main Navigation', 'alcof' ); ?>
 			</h2>
 			
-			<div class="container-fluid h-100">
+			<div class="container h-100">
 				
 				<div class="row header-bar h-100">
 					<div class="col-lg-2 logo-bar">
