@@ -21,11 +21,9 @@
                 max-width: 500px;
             }
             .big-heading {
-                //padding: 0 0 $spacing-lg 0;
-                padding: 0 0 16px 0;
+                padding: 0 0 $spacing-lg 0;
                 position: relative;
-                //margin-bottom: $spacing-lg;
-                margin-bottom: 32px;
+                margin-bottom: $spacing-lg;
                 &:after {
                     position: absolute;
                     content:"";
@@ -47,8 +45,10 @@
                 }
             }
             .slider-body {
-                color: $alcof-gray;
-                max-width: 400px;
+                color: $alcof-charcoal;
+                max-width: 483px;
+                font-size: 18px;
+                line-height: 31.96px;
             }
             @include media-breakpoint-down(xs) {
                 padding: $spacing-lg;
