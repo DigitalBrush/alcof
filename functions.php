@@ -112,6 +112,13 @@ function wpdocs_enqueue_custom_admin_style($hook_suffix) {
 add_action( 'admin_enqueue_scripts', 'wpdocs_enqueue_custom_admin_style' );
 
 
+function theme_gsap_script() {
+    wp_enqueue_script( 'gsap-js', 'http://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.1/TweenMax.min.js', array(), false, true );
+    wp_enqueue_script( 'gsap-js2', get_template_directory_uri() . '/js/gsap.js', array(), false, true );
+}
+add_action( 'wp_enqueue_scripts', 'theme_gsap_script' );
+
+
 
   add_action( 'um_post_registration_approved_hook', 'remove_my_action', 9 );
 function remove_my_action(){
@@ -126,26 +133,26 @@ function create_page($page_name,$content,$template){
 
          $my_post = array(
           'post_title'    => $page_name,
-          'post_content'  =>$content,         
-          'post_status'   => 'publish',      
+          'post_content'  =>$content,
+          'post_status'   => 'publish',
           'post_type'     =>'page',
           'comment_status' =>'closed',
-          'page_template'  =>$template        
+          'page_template'  =>$template
         );
         $post_id = wp_insert_post( $my_post);
-        
-        
+
+
     }
-      
-        
+
+
  }
 
 add_action('admin_menu', 'customize_homepage');
 
-function customize_homepage() { 
+function customize_homepage() {
 
     add_submenu_page('themes.php','Alcof Options', 'Alcof Options','manage_options','alcof_options','alcof_options');
-   
+
 }
 
 require_once "alcof-options/alcof_options.php";
