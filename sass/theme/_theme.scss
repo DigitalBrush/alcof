@@ -26,7 +26,7 @@ h1 {
         @include media-breakpoint-down(sm) {
             font-size: 56px;
         }
-        
+
     }
     &:after {
         position: absolute;
@@ -94,7 +94,8 @@ h4 {
         width: $spacing-md;
         height: 3px;
         top: $spacing-md;
-        right: 0;
+        //right: 0;
+	  	margin-left: 16px;
         background: $primary;
     }
 }
@@ -175,7 +176,7 @@ h4 {
     .who-block {
         display: flex;
         align-items: center;
-        
+
         @include media-breakpoint-down(xs) {
             display: block;
         }
@@ -351,7 +352,9 @@ h4 {
         text-align: center;
         font-weight: 700;
         position: relative;
-        padding-bottom: $spacing-lg;
+        //padding-bottom: $spacing-lg;
+        padding-bottom: 16px;
+        margin-bottom: 32px;
         &:after {
             position: absolute;
             content:"";
@@ -827,7 +830,7 @@ h4 {
                     [class*='owl-'] {
                         background: $alcof-dark;
                         color: $white;
-                        padding: $spacing; 
+                        padding: $spacing;
                         font-size: 36px;
                         width: 50px;
                         height: 50px;
@@ -883,7 +886,7 @@ h4 {
             }
         }
     }
-    
+
     .services-contact-block {
         .services-contact {
             .block-left {
@@ -972,7 +975,7 @@ h4 {
 
 #homeModal {
     .modal-content {
-        
+
         background-color: transparent;
         border: 0;
         @include media-breakpoint-up(sm) {
