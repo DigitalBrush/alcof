@@ -113,8 +113,9 @@ add_action( 'admin_enqueue_scripts', 'wpdocs_enqueue_custom_admin_style' );
 
 
 function theme_gsap_script() {
-    wp_enqueue_script( 'gsap-js', 'http://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.1/TweenMax.min.js', array(), false, true );
-    wp_enqueue_script( 'gsap-js2', get_template_directory_uri() . '/js/gsap.js', array(), false, true );
+    wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js', array(), false, true );
+    wp_enqueue_script( 'gsap-scrollTrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js', array(), false, true );
+    wp_enqueue_script( 'gsap-custom', get_template_directory_uri() . '/js/gsap.js', array(), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'theme_gsap_script' );
 
