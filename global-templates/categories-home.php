@@ -49,7 +49,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-md-3 col-sm-6">
 					<div class="category">
 
-            <div class="category-image">
+            <div class="category-image animated-category-image">
               <?php
                 $thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );
                 $image = wp_get_attachment_url( $thumbnail_id );

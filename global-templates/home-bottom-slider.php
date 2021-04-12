@@ -14,7 +14,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="container-fluid" id="wrapper-static-content" tabindex="-1">
 		<div class="row hero-footer">
 			<div class="col-sm-6 hero-image">
-				<div class="slider-image">
+				<div class="slider-image animated-slider-image">
 					<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-bottom-slider.jpg" />
 				</div>
 			</div>
