@@ -14,15 +14,16 @@ window.addEventListener("load", function (e) {
 	gsap.to("body", {visibility: 'visible'});
 
 	const animateHeroHeaderImage = () => {
-		const heroHeaderImageSelector = "#hero-header-img";
-		const imageAnimation = gsap.from(heroHeaderImageSelector, {
-			y: -400,
-		});
+		const headerImagesSelectors = [".page-header", "#hero-header-img"]
 
-		ScrollTrigger.create({
-			trigger: heroHeaderImageSelector,
-			animation: imageAnimation,
-		});
+		headerImagesSelectors.forEach(headerImagesSelector => {
+			gsap.utils.toArray(headerImagesSelector).forEach((header, _) => {
+				gsap.from(header, {
+					y: -400,
+					ScrollTrigger: header,
+				});
+			})
+		})
 	}
 
 	const animateHeadings = () => {
@@ -63,7 +64,7 @@ window.addEventListener("load", function (e) {
 					width: 0,
 					opacity: 0,
 					scrollTrigger: heading,
-					stagger: 0.5,
+					stagger: 1,
 				})
 			})
 		})
@@ -81,6 +82,22 @@ window.addEventListener("load", function (e) {
 			})
 		})
 	}
+
+
+	const animateGalleryItems = () => {
+		const itemSelector = ".blocks-gallery-item";
+
+		gsap.utils.toArray(itemSelector).forEach((galleryItem, i) => {
+			gsap.from(galleryItem, {
+				y: -100,
+				opacity: 0,
+				stagger: 0.5,
+				delay: 1 * i,
+				scrollTrigger: galleryItem,
+			})
+		})
+	}
+
 
 	const animateButtons = () => {
 		const buttonSelector = ".btn";
@@ -101,8 +118,9 @@ window.addEventListener("load", function (e) {
 		];
 	}
 
+	const popUpModal = jQuery("#homeModal");
 
-	jQuery("#homeModal").on("hidden.bs.modal", () => {
+	const initAllAnimations = () => {
 		animateHeadings();
 		animateParagraphs();
 		animateButtons();
@@ -110,7 +128,16 @@ window.addEventListener("load", function (e) {
 		animateHeroHeaderImage();
 		animateCardImages();
 		animateCategoryImages();
-	});
+		animateGalleryItems();
+	}
+
+	if (popUpModal.length) {
+		popUpModal.on("hidden.bs.modal", () => {
+			initAllAnimations();
+		});
+	} else initAllAnimations();
+
+
 
 	// ScrollTrigger.batch("p", {
 	// 	start: "top center",

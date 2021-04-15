@@ -19,11 +19,11 @@ $container = get_theme_mod( 'understrap_container_type' );
               <?php
 
                     $taxonomy     = 'product_cat';
-                    $orderby      = 'menu_order';  
+                    $orderby      = 'menu_order';
                     $show_count   = 0;      // 1 for yes, 0 for no
                     $pad_counts   = 0;      // 1 for yes, 0 for no
-                    $hierarchical = 1;      // 1 for yes, 0 for no  
-                    $title        = '';  
+                    $hierarchical = 1;      // 1 for yes, 0 for no
+                    $title        = '';
                     $empty        = 1;
 
                     $args = array(
@@ -37,17 +37,17 @@ $container = get_theme_mod( 'understrap_container_type' );
                             'hide_empty'   => $empty
                     );
                     $all_categories = get_categories( $args );
-                
+
                     foreach ($all_categories as $cat) {
                       if($cat->category_parent == 0) {
-                          $category_id = $cat->term_id; ?>  
+                          $category_id = $cat->term_id; ?>
 
 			<div class="col-md-3 col-sm-6">
 				<div class="category">
-					<div class="category-image">
+					<div class="category-image animated-category-image">
               <?php
-                  $thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );    
-                  $image = wp_get_attachment_url( $thumbnail_id ); 
+                  $thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );
+                  $image = wp_get_attachment_url( $thumbnail_id );
                 ?>
                 <img src="<?php echo $image; ?>">
           </div>
@@ -59,11 +59,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div>
           <?php
 
-                          
-                    }       
+
+                    }
                   }
                   ?>
-			
+
 		</div>
     <div class="text-center">
 				<a class="btn btn-lg btn-secondary" href="">Voir plus de catégories (12)</a>
