@@ -118,6 +118,32 @@ window.addEventListener("load", function (e) {
 		];
 	}
 
+	const animateHomeHero = () => {
+		const scrollToSection = (i, animation) => {
+			gsap.to(window, {
+				scrollTo: {
+					y: i * innerHeight, autoKill: false,
+				},
+				duration:1,
+			});
+
+			if (animation) animation.restart();
+		}
+
+		gsap.utils.toArray(".content-section").forEach((section, i) => {
+			ScrollTrigger.create({
+				trigger: section,
+				onEnter: () => scrollToSection(i),
+			});
+
+			ScrollTrigger.create({
+				trigger: section,
+				start: "bottom bottom",
+				onEnterBack: () => scrollToSection(i),
+			})
+		})
+	}
+
 	const popUpModal = jQuery("#homeModal");
 
 	const initAllAnimations = () => {
@@ -129,6 +155,9 @@ window.addEventListener("load", function (e) {
 		animateCardImages();
 		animateCategoryImages();
 		animateGalleryItems();
+
+
+		animateHomeHero();
 	}
 
 	if (popUpModal.length) {
