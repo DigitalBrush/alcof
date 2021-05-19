@@ -47,13 +47,14 @@ h1 {
 
 h2 {
   font-size: 50.52px;
-  line-height: 1.8rem;
+  line-height: 2em;
   position: relative;
   margin-bottom: $spacing-lg;
   font-weight: 700;
   padding: 0 0 $spacing-lg 0;
   @include media-breakpoint-down(xs) {
 	font-size: 24px;
+	line-height: 1.8em;
   }
 
   &:after {
@@ -358,7 +359,7 @@ h4 {
 	  padding: 0 0 $spacing-lg 0;
 	  position: relative;
 	  margin-bottom: $spacing-lg;
-
+	  line-height: 70.51px;
 	  &:after {
 		position: absolute;
 		content: "";
