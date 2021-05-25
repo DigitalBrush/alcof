@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<h2 class="big-heading"><?php echo get_option('hero_intro_heading');?></h2>
 						<div class="slider-body">
 							<p class="hero-intro-text"><?php echo get_option('hero_intro_text');?></p>
-							<a href="<?php echo esc_url(home_url('shop')); ?>" class="btn btn-lg btn-secondary">Acheter maintenant</a>
+							<a href="<?php echo esc_url(home_url('produits')); ?>" class="btn btn-lg btn-secondary">Acheter maintenant</a>
 						</div>
 						<h4 class="small-heading"><?php echo get_option('hero_intro_subheading');?></h4>
 					</div>
