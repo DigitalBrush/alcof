@@ -72,6 +72,7 @@ if ( post_password_required() ) {
 			if( $field['choices'] ): ?>
 				<ul>
 					<?php foreach( $field['choices'] as $value => $label ): ?>
+						console.log($label);
 						<li><?php echo $label; ?></li>
 					<?php endforeach; ?>
 				</ul>
