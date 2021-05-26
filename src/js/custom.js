@@ -91,6 +91,15 @@ jQuery(function($){
     } else { 
         
     } 
+
+    $('.color-options li').each(function() {
+        var str = $(this).text();
+        str = str.replace(/\s+/g, '-').toLowerCase();
+
+        $(this).addClass(str);
+    });
+    
+
 });
 
 jQuery(document).ready(function() {

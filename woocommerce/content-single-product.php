@@ -70,7 +70,7 @@ if ( post_password_required() ) {
 		<?php
 			$field = get_field_object('couleurs');
 			if( $field['choices'] ): ?>
-				<ul>
+				<ul class="color-options">
 					<?php foreach( $field['choices'] as $value => $label ): ?>
 						<li class="color"><?php echo $label; ?></li>
 					<?php endforeach; ?>
