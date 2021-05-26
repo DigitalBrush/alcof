@@ -27,14 +27,17 @@ global $product;
 
 	<?php
 		$tags = get_the_terms($product->get_id(), 'product_tag' );
+		if (is_array($tags) || is_object($tags))
+			{
+			$html = '<div class="post_tags">';
+			foreach ( $tags as $tag ) {
+				$tag_link = get_tag_link( $tag->term_id );
+				$html .= "<span title='{$tag->name} Tag' class='btn btn-tag {$tag->slug}'>";
+				$html .= "{$tag->name}</span> ";
+			}
 
-		$html = '<div class="post_tags">';
-		foreach ( $tags as $tag ) {
-			$tag_link = get_tag_link( $tag->term_id );
-			$html .= "<span title='{$tag->name} Tag' class='btn btn-tag {$tag->slug}'>";
-			$html .= "{$tag->name}</span> ";
-		}
-		$html .= '</div>';
+			$html .= '</div>';
+			}
 		echo $html;
 		?>
 
