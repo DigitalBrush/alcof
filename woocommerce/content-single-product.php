@@ -72,7 +72,7 @@ if ( post_password_required() ) {
 			if( $field['choices'] ): ?>
 				<ul>
 					<?php foreach( $field['choices'] as $value => $label ): ?>
-						$labelclass = $label.replace(/\s+/g, '-').toLowerCase();
+						<?php $labelclass = $label.replace(/\s+/g, '-').toLowerCase(); ?>
 						<li class=$labelclass><?php echo $label; ?></li>
 					<?php endforeach; ?>
 				</ul>
