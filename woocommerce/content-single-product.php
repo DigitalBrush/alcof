@@ -67,7 +67,15 @@ if ( post_password_required() ) {
 			<?php get_template_part( 'woocommerce/single-product/additional-information' );?>
 		</div>
 		<div class="product-part">
-			<?php the_field('couleurs'); ?>
+		<?php
+			$field = get_field_object('couleurs');
+			if( $field['choices'] ): ?>
+				<ul>
+					<?php foreach( $field['choices'] as $value => $label ): ?>
+						<li><?php echo $label; ?></li>
+					<?php endforeach; ?>
+				</ul>
+			<?php endif; ?>
 		</div>
 		
 	</div>
