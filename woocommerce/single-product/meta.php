@@ -37,8 +37,9 @@ global $product;
 			}
 
 			$html .= '</div>';
+			
+			echo $html;
 			}
-		echo $html;
 		?>
 
 	<?php do_action( 'woocommerce_product_meta_end' ); ?>
