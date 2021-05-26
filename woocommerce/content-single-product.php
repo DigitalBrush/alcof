@@ -66,6 +66,10 @@ if ( post_password_required() ) {
 		<div class="product-part">
 			<?php get_template_part( 'woocommerce/single-product/additional-information' );?>
 		</div>
+		<div class="product-part">
+			<?php the_field('couleurs'); ?>
+		</div>
+		
 	</div>
 
 </div></div>
