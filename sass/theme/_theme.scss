@@ -52,6 +52,7 @@ h2 {
   margin-bottom: $spacing-lg;
   font-weight: 700;
   padding: 0 0 $spacing-lg 0;
+  color: $alcof-charcoal;
   @include media-breakpoint-down(xs) {
 	font-size: 24px;
 	line-height: 1.8em;
@@ -147,6 +148,7 @@ h4 {
 
   &.btn-tag {
 	background-color: $gray-200;
+	font-size: 14px;
   }
 }
 

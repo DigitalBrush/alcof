@@ -206,7 +206,12 @@
             }
             .nav-link {
                 color: $white !important;
-                
+                &:hover {
+                    font-weight: 500 !important;
+                }
+            }
+            &:hover {
+                background-color: $alcof-dark;
             }
         }
     }

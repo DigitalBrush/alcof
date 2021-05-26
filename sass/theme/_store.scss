@@ -105,6 +105,27 @@
                         display: none;
                     }
                 }
+                .woocommerce-product-attributes {
+                    .woocommerce-product-attributes-item {
+                        border: 0;
+                        .woocommerce-product-attributes-item__label {
+                            font-size: 14px;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                            letter-spacing: 3px;
+                            margin-bottom: 0;
+                            padding: 0 0 $spacing-sm 0;
+                            color: $alcof-charcoal;
+                            vertical-align: top;
+                            padding-top: $spacing;
+                        }
+                        .woocommerce-product-attributes-item__value {
+                            font-weight: 400;
+                            font-style: initial;
+                            vertical-align: top;
+                        }
+                    }
+                }
             }
             p.price {
                 color: $alcof-dark;
@@ -119,6 +140,45 @@
                 justify-content: space-between;
                 align-items: center;
                 padding: $spacing 0;
+                .post_tags {
+                    .btn-tag {
+                        padding: 18px 18px 18px 36px;
+                        font-size: 14px;
+                        &:before {
+                            position: absolute;
+                            font-family: 'Material Icons';
+                            -webkit-font-feature-settings: 'liga';
+                            font-size: 20px;
+                            left: 24px;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                        &.anti-froid {
+                            position: relative;
+                            &:before {
+                                content: '\eb3b';
+                            }
+                        }
+                        &.anti-feu {
+                            position: relative;
+                            &:before {
+                                content: '\e80e';
+                            }
+                        }
+                        &.anti-bruit {
+                            position: relative;
+                            &:before {
+                                content: '\e04f';
+                            }
+                        }
+                        &.certification {
+                            position: relative;
+                            &:before {
+                                content: '\e04f';
+                            }
+                        }
+                    }
+                }
             }
             .woocommerce-tabs {
                 ul.tabs {
