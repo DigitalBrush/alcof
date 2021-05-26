@@ -126,6 +126,20 @@
                         }
                     }
                 }
+                .product-pdf {
+                    display: flex;
+                    align-items: center;
+                    color: $alcof-charcoal;
+                    font-size: 14px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    padding-bottom: $spacing-sm;
+                    &:hover {
+                        text-decoration: none;
+                        color: $primary;
+                    }
+                }
             }
             p.price {
                 color: $alcof-dark;

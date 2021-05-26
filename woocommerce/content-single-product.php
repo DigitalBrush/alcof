@@ -78,6 +78,15 @@ if ( post_password_required() ) {
 			<?php endif; ?>
 		</div>
 		
+		<?php $fieldpdf = get_field('documentation');  
+		if($fieldpdf)  { ?>
+			<div class="product-part">
+			
+				<a class="product-pdf" href="<?php echo $fieldpdf; ?>"><span class="material-icons">download</span> Télécharger la documentation (pdf)</a>
+
+			</div>
+		<?php } ?>
+		
 	</div>
 
 </div></div>
