@@ -129,13 +129,13 @@
                 .color-options {
                     display: flex;
                     align-items: center;
+                    flex-flow: row; 
+                    flex-wrap: wrap;
                     .color-item {
                         padding: $spacing $spacing-sm;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        flex-flow: row; 
-                        flex-wrap: wrap;
                         .color-preview {
                             padding: $spacing;
                         }
