@@ -69,12 +69,19 @@ if ( post_password_required() ) {
 		<div class="product-part">
 		<?php
 			$field = get_field_object('couleurs');
-			if( $field['choices'] ): ?>
-				<ul class="color-options">
-					<?php foreach( $field['choices'] as $value => $label ): ?>
-						<li class="color"><?php echo $label; ?></li>
+			if( $field['value'] ): ?>
+				<div class="color-options">
+					<?php foreach( $field['value'] as $value => $label ): ?>
+						<div class="color-item">
+							<div class="color-preview">
+								
+							</div>
+							<div class="color-name">
+								<?php echo $label; ?>
+							</div>
+						</div>
 					<?php endforeach; ?>
-				</ul>
+				</div>
 			<?php endif; ?>
 		</div>
 		
@@ -82,7 +89,7 @@ if ( post_password_required() ) {
 		if($fieldpdf)  { ?>
 			<div class="product-part">
 			
-				<a class="product-pdf" href="<?php echo $fieldpdf; ?>"><span class="material-icons">download</span> Télécharger la documentation (pdf)</a>
+				<a class="product-pdf" href="<?php echo $fieldpdf; ?>" target="_blank"><span class="material-icons">download</span> Télécharger la documentation (pdf)</a>
 
 			</div>
 		<?php } ?>

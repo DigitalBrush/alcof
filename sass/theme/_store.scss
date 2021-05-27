@@ -126,6 +126,22 @@
                         }
                     }
                 }
+                .color-options {
+                    display: flex;
+                    align-items: center;
+                    .color-item {
+                        padding: $spacing $spacing-sm;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .color-preview {
+                            padding: $spacing;
+                        }
+                        .color-name {
+                            font-size: 12px;
+                        }
+                    }
+                }
                 .product-pdf {
                     display: flex;
                     align-items: center;

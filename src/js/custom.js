@@ -92,11 +92,11 @@ jQuery(function($){
         
     } 
 
-    $('.color-options li').each(function() {
-        var str = $(this).text();
-        str = str.replace(/\s+/g, '-').toLowerCase();
+    $('.color-item').each(function() {
+        var str = $(this).find('.color-name').text();
+        str = str.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g, '').toLowerCase();
 
-        $(this).addClass(str);
+        $(this).find('.color-preview').addClass('bg-couleurs_'+str);
     });
     
 
