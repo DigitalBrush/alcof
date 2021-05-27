@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<h3 class="text-heading"><span class="main-color">10 boutiques</span> en Ile-de-France, plus de <span class="main-color">1000m²</span> de showroom</h3>
 						<div class="text-body">
 							<p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque enim numquam delectus.</p>
-							<a href="<?php echo esc_url(home_url('shop')); ?>" class="btn btn-lg btn-primary"><span class="material-icons">near_me</span>Acheter maintenant</a>
+							<a href="<?php echo esc_url(home_url('#')); ?>" class="btn btn-lg btn-primary"><span class="material-icons">near_me</span>Acheter maintenant</a>
 						</div>
 					</div>
 				</div>

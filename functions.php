@@ -96,6 +96,41 @@ remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 8 );
 
+
+function alcof_shop_display_post_meta() {
+
+	global $product;
+	
+	$brand = get_field('brand');
+
+    if ( $brand ) {
+		echo '<div class="product-brand">' . $brand . '</div>';
+	}
+
+    $limit = 15;
+
+    $description = $product->get_short_description(); // Product short description
+
+    // Limit the words length
+    if (str_word_count($description, 0) > $limit) {
+        $words = str_word_count($description, 2);
+        $pos = array_keys($words);
+        $excerpt = substr($description, 0, $pos[$limit]) . '...';
+    } else {
+        $excerpt = $description;
+    }
+
+	
+    if ( $description ) {
+		echo '<div class="product-desc">' . $excerpt . '</div>';
+	}
+
+}
+add_action( 'woocommerce_after_shop_loop_item_title', 'alcof_shop_display_post_meta', 3 );
+
+
+
+
 function wpdocs_enqueue_custom_admin_style($hook_suffix) {
     if($hook_suffix != 'appearance_page_alcof_options') {
         return;

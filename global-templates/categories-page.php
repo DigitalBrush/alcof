@@ -14,14 +14,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="<?php echo esc_attr( $container ); ?> category-page" id="wrapper-static-content" tabindex="-1">
 		<div class="page-section">
       <div class="category-search d-md-none d-block">
-            <a href="<?php echo esc_url(home_url('shop')); ?>" class="btn btn-lg btn-primary"><span class="material-icons">search</span>Rechercher</a>
+            <a href="<?php echo esc_url(home_url('#')); ?>" class="btn btn-lg btn-primary"><span class="material-icons">search</span>Rechercher</a>
             <h6 class="left-dash">parmi 360 références</h6>
           </div>
 
 			<div class="row category-section">
         <div class="col-md-4 col-sm-6 d-none d-md-block" id="searchdiv">
           <div class="category-search">
-            <a href="<?php echo esc_url(home_url('shop')); ?>" class="btn btn-lg btn-primary"><span class="material-icons">search</span>Rechercher</a>
+            <a href="<?php echo esc_url(home_url('#')); ?>" class="btn btn-lg btn-primary"><span class="material-icons">search</span>Rechercher</a>
             <h6 class="left-dash">parmi 360 références</h6>
           </div>
         </div>
