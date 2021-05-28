@@ -37,10 +37,22 @@
                 float: left;
                 width: 48%;
             }
+            a {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                img {
+                    width: auto;
+                    height: 100%;
+                    margin: 0 auto;
+                    object-fit: cover;
+                }
+            }
             img {
                 width: auto;
                 height: 100%;
                 margin: 0 auto;
+                object-fit: cover;
             }
             .woocommerce-product-gallery__wrapper {
                 height: 100%;
