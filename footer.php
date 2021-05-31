@@ -27,6 +27,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div><!-- row end -->
 </div>
 
+<?php get_template_part( 'global-templates/fullscreen-menu' ); ?>
+
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
 <div class="wrapper footer-bottom" id="wrapper-footer">

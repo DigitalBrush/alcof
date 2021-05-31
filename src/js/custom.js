@@ -98,6 +98,10 @@ jQuery(function($){
 
         $(this).find('.color-preview').addClass('bg-couleurs_'+str);
     });
+
+    $('.openmenu').on('click', function (e) {
+        $('#menuOverlay').modal('show');
+    });
     
 
 });

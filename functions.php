@@ -218,6 +218,12 @@ if( function_exists('acf_add_options_page') ) {
 	));
 
     acf_add_options_sub_page(array(
+		'page_title' 	=> 'Boutiques',
+		'menu_title'	=> 'Boutiques',
+		'parent_slug'	=> 'alcof-options',
+	));
+
+    acf_add_options_sub_page(array(
 		'page_title' 	=> 'Réalisations',
 		'menu_title'	=> 'Réalisations',
 		'parent_slug'	=> 'alcof-options',

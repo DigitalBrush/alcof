@@ -62,7 +62,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                 $image = wp_get_attachment_url( $thumbnail_id );
                 $link = get_term_link( (int)$cat->term_id, 'product_cat' );
               ?>
-              <a class="cat-image" image href="<?php echo $link; ?>"><img src="<?php echo $image; ?>"></a>
+              <a class="cat-image" href="<?php echo $link; ?>"><img src="<?php echo $image; ?>"></a>
 					  </div>
 
 						<div class="category-inner">

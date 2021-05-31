@@ -336,6 +336,59 @@
 }
 
 
+.fullscreen-menu {
+    padding: 0 !important;
+    background: $alcof-dark;
+    color: $white;
+    .modal-dialog {
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        margin: 0;
+    }
+    .modal-content {
+        height: 100%;
+        border: 0;
+        border-radius: 0;
+        background: $alcof-dark;
+        .modal-header {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            .close {
+                margin: initial;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 132.91px;
+                height: 132.91px;
+                color: $alcof-dark;
+                background: $white;
+                text-shadow: none;
+                opacity: 1;
+                .material-icons {
+                    font-size: 42.53px;
+                }
+            }
+        }
+    }
+    .modal-body {
+        overflow-y: auto;
+        .nav-overlay {
+            .menu-heading {
+                color: $primary !important;
+                font-size: 50.373px;
+                line-height: 130%;
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
 
 
 

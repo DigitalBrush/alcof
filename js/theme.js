@@ -7144,6 +7144,9 @@ jQuery(function ($) {
     str = str.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g, '').toLowerCase();
     $(this).find('.color-preview').addClass('bg-couleurs_' + str);
   });
+  $('.openmenu').on('click', function (e) {
+    $('#menuOverlay').modal('show');
+  });
 });
 jQuery(document).ready(function () {
   var $ = jQuery;
