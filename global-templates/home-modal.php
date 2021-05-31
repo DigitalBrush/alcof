@@ -19,10 +19,10 @@ defined( 'ABSPATH' ) || exit;
         </button>
       </div>
       <div class="modal-body">
-        <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/img/modal-image.jpg"/>
+        <img class="" src="<?php the_field('home_image_modale', 'option'); ?>"/>
       </div>
       <div class="modal-footer">
-        <a class="btn btn-lg btn-primary" href=""><span class="material-icons">call</span>Contactez-nous</a>
+        <a class="btn btn-lg btn-primary" href="<?php echo esc_url(home_url('contact')); ?>"><span class="material-icons">call</span><?php the_field('home_bouton_modal', 'option'); ?></a>
         <p>pour en profiter</p>
       </div>
     </div>

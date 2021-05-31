@@ -16,19 +16,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="row hero-header">
 				<div class="col-sm-6 hero-text">
 					<div class="slider-text">
-						<h2 class="big-heading"><?php echo get_option('hero_intro_heading');?></h2>
+						<h2 class="big-heading"><?php the_field('titre_principal', 'option'); ?></h2>
 						<div class="slider-body">
-							<p class="hero-intro-text"><?php echo get_option('hero_intro_text');?></p>
-							<a href="<?php echo esc_url(home_url('produits')); ?>" class="btn btn-lg btn-secondary">Parler à un expert</a>
+							<p class="hero-intro-text"><?php the_field('paragraphe_principal', 'option'); ?></p>
+							<a href="<?php echo esc_url(home_url('contact')); ?>" class="btn btn-lg btn-secondary"><?php the_field('bouton_principal', 'option'); ?></a>
 						</div>
-						<h4 class="small-heading"><?php echo get_option('hero_intro_subheading');?></h4>
+						<h4 class="small-heading"><?php the_field('sous-titre_principal', 'option'); ?></h4>
 					</div>
 				</div>
 				<div class="col-sm-6 hero-image">
 					<div class="slider-image">
-						<img src="<?php
-						echo  get_option('hero_header_img');
-						?>" style="width:100%" id="hero-header-img"/>
+						<img src="<?php the_field('image_principale', 'option'); ?>" id="hero-header-img"/>
 					</div>
 					<div class="slider-logo">
 						<img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-fichet.svg" height="50"/>

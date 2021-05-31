@@ -129,22 +129,17 @@ function alcof_shop_display_post_meta() {
 add_action( 'woocommerce_after_shop_loop_item_title', 'alcof_shop_display_post_meta', 3 );
 
 
-
-
-function wpdocs_enqueue_custom_admin_style($hook_suffix) {
-    if($hook_suffix != 'appearance_page_alcof_options') {
+add_action('acf/input/admin_enqueue_scripts', 'my_acf_admin_enqueue_scripts');
+function my_acf_admin_enqueue_scripts($hook_suffix) {
+    if($hook_suffix != 'toplevel_page_alcof-options') {
         return;
     }
 
     // Load your css.
     wp_register_style( 'custom_wp_admin_css', get_template_directory_uri() . '/css/admin-style.min.css', false, '1.0.0' );
     wp_enqueue_style( 'custom_wp_admin_css' );
-
-    // Load your js.
-    wp_register_script( 'custom_wp_admin_js', get_template_directory_uri() . '/js/theme.js', false, '1.0.0' );
-    wp_enqueue_script( 'custom_wp_admin_js' );
 }
-add_action( 'admin_enqueue_scripts', 'wpdocs_enqueue_custom_admin_style' );
+
 
 
 function theme_gsap_script() {
@@ -164,43 +159,7 @@ function remove_my_action(){
 
 }
 
-create_page("Brand"," ","page-templates/brands.php");
-function create_page($page_name,$content,$template){
-     if(get_page_by_title($page_name)==NULL|| get_post_status( get_page_by_title($page_name) )=="trash") {
 
-         $my_post = array(
-          'post_title'    => $page_name,
-          'post_content'  =>$content,
-          'post_status'   => 'publish',
-          'post_type'     =>'page',
-          'comment_status' =>'closed',
-          'page_template'  =>$template
-        );
-        $post_id = wp_insert_post( $my_post);
-
-
-    }
-
-
- }
-
-add_action('admin_menu', 'customize_homepage');
-
-function customize_homepage() {
-
-    add_submenu_page('themes.php','Alcof Options', 'Alcof Options','manage_options','alcof_options','alcof_options');
-
-}
-
-require_once "alcof-options/alcof_options.php";
-
-function alcof_include_script() {
-    if ( ! did_action( 'wp_enqueue_media' ) ) {
-        wp_enqueue_media();
-    }
-}
-
-add_action( 'admin_enqueue_scripts', 'alcof_include_script' );
 
 
 add_filter('get_comment_author', 'my_comment_author', 10, 1);
@@ -219,3 +178,57 @@ $author = $comment->comment_author;
 }
 return $author;
 }
+
+/**
+ * ACF Options Page 
+ *
+ */
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Options Alcof',
+		'menu_title'	=> 'Options Alcof',
+		'menu_slug' 	=> 'alcof-options',
+		'capability'	=> 'edit_posts',
+        'icon_url'      => 'dashicons-store',
+        'update_button' => 'Mettre à jour',
+        'updated_message' => 'Options enregistrées',
+        'position'      => 61.1,
+        
+		'redirect'		=> true
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Page d\'accueil',
+		'menu_title'	=> 'Page d\'accueil',
+		'parent_slug'	=> 'alcof-options',
+	));
+
+    acf_add_options_sub_page(array(
+		'page_title' 	=> 'Page des services',
+		'menu_title'	=> 'Page des services',
+		'parent_slug'	=> 'alcof-options',
+	));
+
+    acf_add_options_sub_page(array(
+		'page_title' 	=> 'Page de groupe',
+		'menu_title'	=> 'Page de groupe',
+		'parent_slug'	=> 'alcof-options',
+	));
+
+    acf_add_options_sub_page(array(
+		'page_title' 	=> 'Réalisations',
+		'menu_title'	=> 'Réalisations',
+		'parent_slug'	=> 'alcof-options',
+	));
+
+    acf_add_options_sub_page(array(
+		'page_title' 	=> 'Accueil Modal',
+		'menu_title'	=> 'Accueil Modal',
+		'parent_slug'	=> 'alcof-options',
+	));
+	
+	
+}
+

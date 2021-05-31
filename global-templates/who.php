@@ -16,13 +16,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row who-block">
 			<div class="col-md-6">
         <div class="about-text">
-          <h2><?php echo get_option('who_header');?></h2>
-          <p><?php echo get_option('who_details');?></p>
+          <h2><?php the_field('propos_title', 'option'); ?></h2>
+          <p><?php the_field('propos_dalcof', 'option'); ?></p>
         </div>
       </div>
       <div class="col-md-6">
         <div class="about-img">
-          <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/feature-un-travail-sur-mesure.jpg" />
+          <img class="img-fluid" src="<?php the_field('propos_image', 'option'); ?>" />
         </div>
       </div>
 		</div>
