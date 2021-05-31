@@ -369,22 +369,56 @@
                 opacity: 1;
                 .material-icons {
                     font-size: 42.53px;
+                    margin: 0;
                 }
             }
         }
     }
     .modal-body {
         overflow-y: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         .nav-overlay {
+            height: 100%;
+            margin-left: 132.91px;
             .menu-heading {
                 color: $primary !important;
                 font-size: 50.373px;
                 line-height: 130%;
+                font-weight: bold;
                 &:after {
                     display: none;
                 }
             }
+            .nav-column {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .nav-full-item {
+                    display: flex;
+                    align-items: center;
+                    padding: $spacing;
+                    margin-bottom: $spacing-sm;
+                    color: $white;
+                    .nav-full-icon {
+                        width: 100px;
+                        height: 100px;
+                        margin-right: $spacing-sm;
+                        display: flex;
+                        align-items: center;
+                    }
+                    .nav-full-link {
+                        font-weight: bold;
+                        font-size: 28.3497px;
+                        line-height: 50px;
+                    }
+                }
+            }
         }
+    }
+    .modal-footer {
+        border: 0;
     }
 }
 
