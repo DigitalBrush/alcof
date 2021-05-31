@@ -64,12 +64,10 @@ if ( post_password_required() ) {
 			<?php get_template_part( 'woocommerce/single-product/description' );?>
 		</div>
 		<div class="product-part">
-			<?php get_template_part( 'woocommerce/single-product/additional-information' );?>
-		</div>
-		<div class="product-part">
 		<?php
 			$field = get_field_object('couleurs');
 			if( $field['value'] ): ?>
+				<h2 style="opacity: 1; transform: translate(0px, 0px);">Couleurs Disponibles</h2>
 				<div class="color-options">
 					<?php foreach( $field['value'] as $value => $label ): ?>
 						<div class="color-item">
@@ -84,6 +82,10 @@ if ( post_password_required() ) {
 				</div>
 			<?php endif; ?>
 		</div>
+		<div class="product-part">
+			<?php get_template_part( 'woocommerce/single-product/additional-information' );?>
+		</div>
+		
 		
 		<?php $fieldpdf = get_field('documentation');  
 		if($fieldpdf)  { ?>

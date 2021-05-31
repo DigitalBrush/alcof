@@ -586,10 +586,11 @@ h6 {
 	  display: flex;
 	  align-items: center;
 	  background: $white;
-
-	  img {
-		object-fit: cover;
+	  .cat-image {
 		height: 100%;
+		img {
+			object-fit: cover;
+		}
 	  }
 	}
   }
@@ -741,10 +742,12 @@ h6 {
 		display: flex;
 		align-items: center;
 		background: $white;
-
-		img {
-		  object-fit: cover;
-		  height: 100%;
+		.cat-image {
+			height: 100%;
+			img {
+				object-fit: cover;
+				height: 100%;
+			}
 		}
 	  }
 	}
