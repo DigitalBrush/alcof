@@ -16,8 +16,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row who-block">
 			<div class="col-md-6">
         <div class="about-text">
-          <h2><?php the_field('propos_title', 'option'); ?></h2>
+          <h3><?php the_field('propos_title', 'option'); ?></h3>
           <p><?php the_field('propos_dalcof', 'option'); ?></p>
+          <a href="<?php echo esc_url(home_url('produits')); ?>" class="btn btn-lg btn-secondary no-dash"><span class="material-icons">near_me</span><?php the_field('propos_bouton', 'option'); ?></a>
         </div>
       </div>
       <div class="col-md-6">
@@ -31,7 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="section section-reputation">
 	<div class="container" id="wrapper-static-content" tabindex="-1">
-    <h2 class="update-heading">Notre réputation n’est plus à faire</h2>
+    <h3 class="update-heading">Notre réputation n’est plus à faire</h3>
     <div class="row reputation-block">
       <div aria-orientation="vertical" class="col-md-5 col-sm-6 reputation-tabs nav flex-column nav-pills" id="reputationTab" role="tablist">
           <a aria-controls="trust" aria-selected="true" class="nav-link active" data-toggle="tab" href="#trust" id="trust-tab" role="tab">Ils nous font confiance</a> 

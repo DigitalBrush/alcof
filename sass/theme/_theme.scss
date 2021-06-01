@@ -47,7 +47,7 @@ h1 {
 
 h2 {
   font-size: 50.52px;
-  line-height: 2em;
+  line-height: 76px;
   position: relative;
   margin-bottom: $spacing-lg;
   font-weight: 700;
@@ -122,38 +122,50 @@ h6 {
 }
 
 .btn {
-  border-radius: 0;
-  font-weight: 600;
-  font-size: 16px;
-  text-transform: uppercase;
-  //padding: 1rem;
-  padding: 12px 24px;
-  margin: $spacing 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: 3px;
-  line-height: 18.2px;
+	border-radius: 0;
+	font-weight: 600;
+	font-size: 16px;
+	text-transform: uppercase;
+	//padding: 1rem;
+	padding: 12px 24px;
+	margin: $spacing 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	letter-spacing: 3px;
+	font-weight: 600;
+	line-height: 28px;
 
-  &.btn-primary {
-	color: $white !important;
-  }
-
-  &.btn-secondary {
-	color: $white !important;
-	background-color: $alcof-dark;
-	border: 0;
-	position: relative;
-	padding-left: $spacing-max;
-
-	&:before {
-	  position: absolute;
-	  content: "";
-	  width: 20px;
-	  height: 2px;
-	  left: $spacing-md;
-	  background: $white;
+	&.btn-primary {
+		color: $white !important;
+		&.no-dash {
+			&:before {
+				display: none;
+			}
+		}
 	}
+
+	&.btn-secondary {
+		color: $white !important;
+		background-color: $alcof-dark;
+		border: 0;
+		position: relative;
+		padding-left: $spacing-max;
+
+		&:before {
+		position: absolute;
+		content: "";
+		width: 20px;
+		height: 2px;
+		left: $spacing-md;
+		background: $white;
+		}
+		&.no-dash {
+			&:before {
+				display: none;
+			}
+			padding-left: $spacing-md;
+		}
   }
 
   &.btn-tag {
@@ -399,12 +411,13 @@ h6 {
 }
 
 .page-section {
-  padding: $spacing-xxl 0;
+  padding: $spacing-max 0;
 
   &.media {
 	//padding: $spacing-sm 0 $spacing-xxl;
-	padding: $spacing-sm 0;
+	padding: 0;
 	overflow: hidden;
+	margin-bottom: $spacing-big;
   }
 
   .section-title {
@@ -413,7 +426,7 @@ h6 {
 	position: relative;
 	//padding-bottom: $spacing-lg;
 	padding-bottom: 16px;
-	margin-bottom: 32px;
+	margin-bottom: $spacing-max;
 
 	&:after {
 	  position: absolute;
@@ -431,7 +444,7 @@ h6 {
 	  text-transform: uppercase;
 	  text-align: left;
 	  font-weight: 500;
-
+	  margin-bottom: $spacing-lg;
 	  &:after {
 		display: none;
 	  }
@@ -439,8 +452,6 @@ h6 {
   }
 
   .section-services {
-	padding: $spacing-xl 0;
-
 	.single-service {
 	  @include media-breakpoint-down(xs) {
 		padding-bottom: $spacing-xl;
@@ -448,7 +459,7 @@ h6 {
 
 	  .service-image {
 		margin-bottom: $spacing;
-		max-height: 240px;
+		max-height: 285px;
 		overflow: hidden;
 
 		img {
@@ -520,7 +531,7 @@ h6 {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	padding: $spacing-xxl;
+	padding: $spacing-big $spacing-xxl;
 
 	.location-text {
 	  max-width: 500px;
@@ -529,7 +540,11 @@ h6 {
 		position: relative;
 		padding-bottom: $spacing-lg;
 		margin-bottom: $spacing-lg;
-
+		font-size: 28.43px;
+		line-height: 50px;
+		span {
+			color: $primary;
+		}
 		&:after {
 		  position: absolute;
 		  content: "";
@@ -576,6 +591,11 @@ h6 {
 	.category-inner {
 	  padding: $spacing-lg 0;
 	  word-wrap: break-word;
+	  .category-title {
+		a {
+		  color: $alcof-dark;
+		}
+	  }
 	}
 
 	.category-image {
@@ -590,6 +610,7 @@ h6 {
 		height: 100%;
 		img {
 			object-fit: cover;
+			height: 100%;
 		}
 	  }
 	}
@@ -818,7 +839,7 @@ h6 {
 		right: 0;
 		bottom: -250px;
 		background: $alcof-dark;
-		padding: $spacing-xl;
+		padding: $spacing-big $spacing-xl;
 		color: $white;
 		max-width: 400px;
 		@include media-breakpoint-down(sm) {

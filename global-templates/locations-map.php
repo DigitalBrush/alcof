@@ -16,7 +16,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="row section-location">
 				<div class="col-sm-6 location-content">
 					<div class="location-text">
-						<h3 class="text-heading"><span class="main-color">10 boutiques</span> en Ile-de-France, plus de <span class="main-color">1000m²</span> de showroom</h3>
+						<h3 class="text-heading"><?php the_field('carte_section_titre', 'option'); ?></h3>
 						<div class="text-body">
 							<p class=""><?php the_field('carte_section_paragraphe', 'option'); ?></p>
 							<a href="<?php echo esc_url(home_url('produits')); ?>" class="btn btn-lg btn-primary"><span class="material-icons">near_me</span><?php the_field('carte_section_bouton', 'option'); ?></a>

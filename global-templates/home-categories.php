@@ -15,7 +15,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
 		<div class="">
 
-			<h2 class="section-title">Nos produits phares</h2>
+			<h3 class="section-title">Nos produits phares</h3>
 
 			<div class="row category-section">
 

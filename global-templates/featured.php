@@ -14,7 +14,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
 		<div class="page-section">
 
-			<h2 class="section-title">Que voulez-vous protéger ?</h2>
+			<h3 class="section-title">Que voulez-vous protéger ?</h3>
 			<div class="row section-services">
 
 				<div class="col-md-6 col-lg-4">

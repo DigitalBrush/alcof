@@ -14,7 +14,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
 		<div class="page-section">
 
-			<h2 class="section-title">Nos produits phares</h2>
+			<h3 class="section-title">Nos produits phares</h2>
 
 			<div class="row category-section">
 
@@ -53,12 +53,13 @@ $container = get_theme_mod( 'understrap_container_type' );
               <?php
                 $thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );
                 $image = wp_get_attachment_url( $thumbnail_id );
+                $link = get_term_link( (int)$cat->term_id, 'product_cat' );
               ?>
-              <img src="<?php echo $image; ?>">
+              <a class="cat-image" href="<?php echo $link; ?>"><img src="<?php echo $image; ?>"></a>
 					  </div>
 
 						<div class="category-inner">
-							<h4 class="title"><?php echo $cat->name; ?></h4>
+              <h4 class="category-title"><a href="<?php echo $link; ?>"><?php echo $cat->name; ?></a></h4>
 							<p><?php echo $cat->description; ?></p>
 						</div>
 
