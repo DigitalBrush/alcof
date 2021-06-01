@@ -63,25 +63,27 @@ if ( post_password_required() ) {
 		<div class="product-part">
 			<?php get_template_part( 'woocommerce/single-product/description' );?>
 		</div>
-		<div class="product-part">
 		<?php
-			$field = get_field_object('couleurs');
-			if( $field['value'] ): ?>
-				<h2 style="opacity: 1; transform: translate(0px, 0px);">Couleurs Disponibles</h2>
-				<div class="color-options">
-					<?php foreach( $field['value'] as $value => $label ): ?>
-						<div class="color-item">
-							<div class="color-preview">
-								
+		$field = get_field_object('couleurs');
+		if( $field['value'] ): ?>
+			<div class="product-part">
+			
+					<h2 style="opacity: 1; transform: translate(0px, 0px);">Couleurs Disponibles</h2>
+					<div class="color-options">
+						<?php foreach( $field['value'] as $value => $label ): ?>
+							<div class="color-item">
+								<div class="color-preview">
+									
+								</div>
+								<div class="color-name">
+									<?php echo $label; ?>
+								</div>
 							</div>
-							<div class="color-name">
-								<?php echo $label; ?>
-							</div>
-						</div>
-					<?php endforeach; ?>
-				</div>
-			<?php endif; ?>
-		</div>
+						<?php endforeach; ?>
+					</div>
+				
+			</div>
+		<?php endif; ?>
 		<div class="product-part">
 			<?php get_template_part( 'woocommerce/single-product/additional-information' );?>
 		</div>
