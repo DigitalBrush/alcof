@@ -22,22 +22,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="row owl-carousel owl-theme home-bottom-carousel">
 					<div class="col-sm-12">
 						<div class="content-block">
-							<h2>Le plus grand Point Fort Fichet d’Europe</h2>
-							<p>Nos consultants se déplaçent gratuitement et à votre convenance. Leur rôle sera essentiellement de vous conseiller dans le choix de votre dispositif de sécurité. Forts d'une solide expérience des aspects techniques, financiers et esthétiques de la protection, ils étudieront votre demande, analyseront votre cahier des charges ainsi que votre budget et sauront vous orienter vers la solution la mieux adaptée à votre besoin. N'hésitez pas nous consulter. </p>
+							<h3>Le plus grand Point Fort Fichet d’Europe</h3>
+							<p>Lorsque Roger Bonhomme crée son entreprise en 1985, Alcof Sécurité l'aventure de la sécurité commençait. Progressivement, notre entreprise est devenue plus importante pour, à l'orée du XXIe siècle, faire ses premiers pas à l'international. Depuis, Alcof Sécurité est l'un des acteurs les plus importants de la scène européenne et un grand nom partout dans le monde, dans le secteur de la sécurité.</p>
 						</div>
 					</div>
 
 					<div class="col-sm-12">
 						<div class="content-block">
-							<h2>Le plus grand Point Fort Fichet d’Europe</h2>
-							<p>Nos consultants se déplaçent gratuitement et à votre convenance. Leur rôle sera essentiellement de vous conseiller dans le choix de votre dispositif de sécurité. Forts d'une solide expérience des aspects techniques, financiers et esthétiques de la protection, ils étudieront votre demande, analyseront votre cahier des charges ainsi que votre budget et sauront vous orienter vers la solution la mieux adaptée à votre besoin. N'hésitez pas nous consulter. </p>
+							<h3>Le plus grand Point Fort Fichet d’Europe</h3>
+							<p>Lorsque Roger Bonhomme crée son entreprise en 1985, Alcof Sécurité l'aventure de la sécurité commençait. Progressivement, notre entreprise est devenue plus importante pour, à l'orée du XXIe siècle, faire ses premiers pas à l'international. Depuis, Alcof Sécurité est l'un des acteurs les plus importants de la scène européenne et un grand nom partout dans le monde, dans le secteur de la sécurité.</p>
 						</div>
 					</div>
 
 					<div class="col-sm-12">
 						<div class="content-block">
-							<h2>Le plus grand Point Fort Fichet d’Europe</h2>
-							<p>Nos consultants se déplaçent gratuitement et à votre convenance. Leur rôle sera essentiellement de vous conseiller dans le choix de votre dispositif de sécurité. Forts d'une solide expérience des aspects techniques, financiers et esthétiques de la protection, ils étudieront votre demande, analyseront votre cahier des charges ainsi que votre budget et sauront vous orienter vers la solution la mieux adaptée à votre besoin. N'hésitez pas nous consulter. </p>
+							<h3>Le plus grand Point Fort Fichet d’Europe</h3>
+							<p>Lorsque Roger Bonhomme crée son entreprise en 1985, Alcof Sécurité l'aventure de la sécurité commençait. Progressivement, notre entreprise est devenue plus importante pour, à l'orée du XXIe siècle, faire ses premiers pas à l'international. Depuis, Alcof Sécurité est l'un des acteurs les plus importants de la scène européenne et un grand nom partout dans le monde, dans le secteur de la sécurité.</p>
 						</div>
 					</div>
 				</div>

@@ -14,7 +14,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="section section-who">
 	<div class="container-fluid" id="wrapper-static-content" tabindex="-1">
 		<div class="row who-block">
-			<div class="col-md-6">
+			<div class="col-md-6 about-col">
         <div class="about-text">
           <h3><?php the_field('propos_title', 'option'); ?></h3>
           <p><?php the_field('propos_dalcof', 'option'); ?></p>

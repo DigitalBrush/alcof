@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper footer-cta" id="wrapper-footer">
+<div class="footer-cta" id="wrapper-footer">
 	<div class="<?php echo esc_attr( $container ); ?>">
 		<div class="row d-flex justify-content-center">
 			<div class="col-md-6">
@@ -31,7 +31,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
-<div class="wrapper footer-bottom" id="wrapper-footer">
+<div class="footer-bottom" id="wrapper-footer">
 
 	<div class="<?php echo esc_attr( $container ); ?>">
 

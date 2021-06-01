@@ -74,7 +74,7 @@ h3 {
   font-weight: 700;
   position: relative;
   margin-bottom: $spacing-lg;
-  padding: 0 0 $spacing-lg 0;
+  padding: 0 0 $spacing-sm 0;
   @include media-breakpoint-down(xs) {
 	font-size: 18px;
   }
@@ -82,7 +82,7 @@ h3 {
   &:after {
 	position: absolute;
 	content: "";
-	width: $spacing-md;
+	width: 80px;
 	height: 3px;
 	bottom: 0;
 	left: 0;
@@ -217,41 +217,50 @@ h6 {
 .section-who {
   padding: 0;
 
-  .who-block {
-	display: flex;
-	align-items: center;
+  	.who-block {
+		display: flex;
+		align-items: stretch;
+		
+		@include media-breakpoint-down(xs) {
+			display: block;
+		}
 
-	@include media-breakpoint-down(xs) {
-	  display: block;
-	}
-
-	.about-text {
-	  background: $alcof-grey;
-	  position: relative;
-	  z-index: 2;
-	  padding: $spacing-xl;
-	  @include media-breakpoint-up(md) {
-		margin-right: -100px;
-		max-width: 600px;
-		float: right;
-	  }
-
-	  h1 {
-		font-weight: 500;
-		padding: 0 0 $spacing-lg 0;
-	  }
-
-	  @include media-breakpoint-down(xs) {
-		padding: $spacing-lg;
-		margin: 0 auto;
-	  }
-	}
-
-	.about-img {
-	  position: relative;
-	  z-index: 1;
-	}
-  }
+		.about-col {
+			padding: $spacing-big 0;
+			position: relative;
+			z-index: 2;
+			.about-text {
+				background: $alcof-grey;
+				padding: $spacing-xl 100px;
+				@include media-breakpoint-up(md) {
+					margin-right: -100px;
+					max-width: 600px;
+					float: right;
+				}
+		
+				h1 {
+					font-weight: 500;
+					padding: 0 0 $spacing-lg 0;
+				}
+		
+				@include media-breakpoint-down(xs) {
+					padding: $spacing-lg;
+					margin: 0 auto;
+				}
+			}	  
+		}
+		.about-img {
+			position: relative;
+			z-index: 1;
+			height: 100%;
+			max-height: 700px;
+			display: flex;
+			img {
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+  	}
 }
 
 .section-reputation {
@@ -268,8 +277,9 @@ h6 {
 		color: $alcof-dark;
 		text-transform: uppercase;
 		letter-spacing: 2px;
-		font-size: 14px;
 		font-weight: 600;
+		font-size: 16px;
+		line-height: 28px;
 		border-bottom: 1px solid $gray-200;
 		padding: $spacing-lg $spacing-sm;
 		border-radius: 0;
@@ -420,6 +430,10 @@ h6 {
 	margin-bottom: $spacing-big;
   }
 
+  &.home-category {
+	  padding: $spacing-big 0;
+  }
+
   .section-title {
 	text-align: center;
 	font-weight: 700;
@@ -458,7 +472,7 @@ h6 {
 	  }
 
 	  .service-image {
-		margin-bottom: $spacing;
+		margin-bottom: $spacing-lg;
 		max-height: 285px;
 		overflow: hidden;
 
@@ -1122,24 +1136,28 @@ h6 {
   align-items: center;
 }
 
-.contact-block {
-  padding: 0;
-
-  .contact-content {
-	display: flex;
-	justify-content: flex-end;
-	text-align: right;
-
-	h1 {
-	  padding-bottom: $spacing;
-
-	  &:after {
-		right: 0;
-		left: initial;
-		color: $alcof-dark;
-	  }
+.contact-section {
+	padding: $spacing-max 0;
+	background-size: cover;
+	background-position: center center;
+	.contact-block {
+		padding: 0;
+	  
+		.contact-content {
+		  display: flex;
+		  justify-content: flex-end;
+		  text-align: right;
+	  
+		  h1 {
+			padding-bottom: $spacing-sm;
+			&:after {
+			  right: 0;
+			  left: initial;
+			  background: $alcof-dark;
+			}
+		  }
+		}
 	}
-  }
 }
 
 .service-page {

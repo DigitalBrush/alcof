@@ -37,7 +37,7 @@
                 }
             }
             .small-heading {
-                padding: $spacing-lg 0;
+                padding: $spacing-lg 0 0;
                 font-weight: 600;
                 span {
                     color: $primary;
@@ -76,11 +76,10 @@
         }
         .slider-logo {
             background: $white;
-            padding: $spacing $spacing-lg;
+            padding: $spacing-lg $spacing-max;
             position: absolute;
             bottom: 0;
             right: 0;
-            max-height: 100px;
         }
     }
 }

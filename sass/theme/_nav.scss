@@ -41,13 +41,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 14px;
+            letter-spacing: 3px;
         }
         .breadcrumbs-top {
             span {
                 margin: 0 $spacing;
                 color: $alcof-dark;
                 text-transform: uppercase;
-                letter-spacing: 2px;
+                letter-spacing: 3px;
                 font-size: 12px;
                 font-weight: 500;
                 a {

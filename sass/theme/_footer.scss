@@ -22,6 +22,7 @@
     }
     .text-body {
         margin: 0 auto;
+        max-width: 380px;
         p {
             color: $white;
         }
@@ -30,9 +31,13 @@
 }
 .footer-top {
     background: $alcof-dark !important;
+    border-top: 1px solid $alcof-charcoal;
     color: $white;
+    padding: $spacing-lg 0;
     .footer-widget {
-        margin-bottom: $spacing-lg;
+        @include media-breakpoint-down(xs) {
+            margin-bottom: $spacing-lg;
+        }
         .widget-title {
             font-size: 18px;
             font-weight: 700;
@@ -45,7 +50,7 @@
                 content:"";
                 width: $spacing-md;
                 height: 3px;
-                top: $spacing;
+                top: 12px;
                 right: 0;
                 left: initial;
                 background: $primary;
@@ -64,6 +69,7 @@
                 text-transform: uppercase;
                 letter-spacing: 2px;
                 font-size: 14px;
+                font-weight: 600;
                 &:hover {
                     color: $primary;
                 }

@@ -2,7 +2,7 @@ window.addEventListener("load", function (e) {
 	gsap.defaults({
 		// easy: "power3",
 		ease: "power3.easeInOut",
-		duration: 1.5,
+		duration: 0,
 	})
 	gsap.registerPlugin(ScrollTrigger);
 

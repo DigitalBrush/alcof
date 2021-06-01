@@ -29,7 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<img src="<?php the_field('image_principale', 'option'); ?>" id="hero-header-img"/>
 					</div>
 					<div class="slider-logo">
-						<img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-fichet.svg" height="50"/>
+						<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-fichet.svg"/>
 					</div>
 				</div>
 			</div>
