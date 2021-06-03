@@ -122,6 +122,8 @@ jQuery(function($){
     $('.openmenu').on('click', function (e) {
         $('#menuOverlay').modal('show');
     });
+
+    
     
 
 });
@@ -142,6 +144,24 @@ jQuery(document).ready(function() {
             });
         }
     }
+});
+
+jQuery(function($) {
+    $(document).ready(function() {
+        $("#readMore").click(function(){
+            $(".collapsed-content").hide();
+            $(".full-content").show();
+            $("#readMore").toggle();// "read more link id"
+            $(".product-part .full-content h3, .product-part .full-content p").removeAttr("style");
+            return false;
+        });
+        $("#readLess").click(function(){
+            $(".collapsed-content").show();
+            $(".full-content").hide();
+            $("#readLess").toggle();// "read more link id"
+            return false;
+        });
+    });
 });
 
 

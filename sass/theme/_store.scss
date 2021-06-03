@@ -103,10 +103,25 @@
                 padding-bottom: $spacing-md;
                 margin-bottom: $spacing-lg;
             }
+            .full-content {
+                display: none;
+            }
             .product-part {
                 border-bottom: 1px solid $alcof-border-color;
                 padding: $spacing-lg 0;
                 h2 {
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    margin-bottom: 0;
+                    padding: 0 0 $spacing-sm 0;
+                    display: none;
+                    &:after {
+                        display: none;
+                    }
+                }
+                h3 {
                     font-size: 16px;
                     font-weight: 600;
                     text-transform: uppercase;

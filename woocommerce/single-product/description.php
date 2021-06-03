@@ -27,4 +27,24 @@ $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Caract
 	<h2><?php echo esc_html( $heading ); ?></h2>
 <?php endif; ?>
 
-<?php the_content(); ?>
+<div class="collapsed-content">
+    <?php
+        global $more;
+        $temp = $more;
+        $more = false;
+        $short_description = get_the_content( '' );
+        echo $short_description;
+        $more = $temp;
+    ?>
+	<div>
+		<a class="btn btn-secondary" id="readMore">En lire plus</a>
+	</div>
+</div>
+<div class="full-content">
+    <?php
+        $full_description = the_content();
+    ?>
+	<a class="btn btn-secondary" id="readLess">Lire moins</a>
+</div>
+
+

@@ -851,71 +851,86 @@ h6 {
 }
 
 .about-page {
-  .page-header {
-	.header-row {
-	  position: relative;
+	.page-header {
+		.header-row {
+			position: relative;
+			.header-text {
+				.headline {
+					color: $alcof-dark;
+					font-size: 200px;
+					font-weight: 900;
+					margin: 0;
+					padding: 0;
+					@include media-breakpoint-down(sm) {
+						font-size: 100px;
+					}
 
-	  .header-text {
-		.headline {
-		  color: $alcof-dark;
-		  font-size: 200px;
-		  font-weight: 900;
-		  margin: 0;
-		  padding: 0;
-		  @include media-breakpoint-down(sm) {
-			font-size: 100px;
-		  }
+					&:after {
+						display: none;
+					}
+				}
 
-		  &:after {
-			display: none;
-		  }
+				.pretitle {
+					color: $alcof-dark;
+					font-weight: 600;
+					display: flex;
+					align-items: center;
+
+					&:after {
+						display: none;
+					}
+				}
+			}
+
+			.about-text {
+				position: absolute;
+				right: 0;
+				bottom: -250px;
+				background: $alcof-dark;
+				padding: $spacing-xl;
+				color: $white;
+				max-width: 400px;
+				@include media-breakpoint-down(sm) {
+					position: relative;
+					bottom: 0;
+				}
+
+				p {
+					position: relative;
+					padding-top: $spacing-lg;
+
+					&:before {
+						position: absolute;
+						content: "";
+						width: 40px;
+						height: 5px;
+						top: 0;
+						left: 0;
+						background: $primary;
+					}
+				}
+			}
+			
 		}
-
-		.pretitle {
-		  color: $alcof-dark;
-		  font-weight: 600;
-		  display: flex;
-		  align-items: center;
-
-		  &:after {
-			display: none;
-		  }
-		}
-	  }
-
-	  .about-text {
-		position: absolute;
-		right: 0;
-		bottom: -250px;
-		background: $alcof-dark;
-		padding: $spacing-big $spacing-xl;
-		color: $white;
-		max-width: 400px;
-		@include media-breakpoint-down(sm) {
-		  position: relative;
-		  bottom: 0;
-		}
-
-		p {
-		  position: relative;
-		  padding-top: $spacing-lg;
-
-		  &:before {
-			position: absolute;
-			content: "";
-			width: 40px;
-			height: 5px;
-			top: 0;
-			left: 0;
-			background: $primary;
-		  }
-		}
-	  }
-	}
   }
 
   .content-area {
-	padding: 100px 0;
+		padding: 100px 0;
+		.entry-content {
+			h6 {
+				position: relative;
+				padding-bottom: $spacing-md;
+				&:after {
+					position: absolute;
+					content: "";
+					width: 30px;
+					height: 3px;
+					bottom: 0;
+					left: 0;
+					background: $primary;
+				}
+			}
+		}
   }
 
 
@@ -1410,7 +1425,7 @@ table {
 	margin-bottom: $spacing-lg;
 	tr {
 		border: 0;
-		&:nth-child(odd) {
+		&:nth-child(even) {
 			background: $alcof-grey;
 		}
 		th {

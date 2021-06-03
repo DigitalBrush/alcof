@@ -62,6 +62,7 @@ if ( post_password_required() ) {
 		?>
 		<div class="product-part">
 			<?php get_template_part( 'woocommerce/single-product/description' );?>
+			
 		</div>
 		<?php
 		$field = get_field_object('couleurs');

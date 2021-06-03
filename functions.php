@@ -140,7 +140,7 @@ function my_acf_admin_enqueue_scripts($hook_suffix) {
     wp_enqueue_style( 'custom_wp_admin_css' );
 }
 
-
+add_filter( 'woocommerce_is_sold_individually', '__return_true' );
 
 function theme_gsap_script() {
     wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js', array(), false, true );
