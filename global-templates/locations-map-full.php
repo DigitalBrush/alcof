@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 	?>
 
-		<div class="container-fluid" id="wrapper-static-content" tabindex="-1">
+		<div class="container-fluid p-0" id="wrapper-static-content" tabindex="-1">
 
 			<div class="section-location">
 				<div class="location-map">

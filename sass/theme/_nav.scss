@@ -369,9 +369,16 @@
                 background: $white;
                 text-shadow: none;
                 opacity: 1;
+                @include media-breakpoint-down(xs) {
+                    width: 80px;
+                    height: 80px;
+                }
                 .material-icons {
                     font-size: 42.53px;
                     margin: 0;
+                    @include media-breakpoint-down(xs) {
+                        font-size: 24px;
+                    }
                 }
             }
         }
@@ -384,6 +391,9 @@
         .nav-overlay {
             height: 100%;
             margin-left: 132.91px;
+            @include media-breakpoint-down(xs) {
+                margin: 0 auto;
+            }
             .menu-heading {
                 color: $primary !important;
                 font-size: 50.373px;
@@ -391,6 +401,10 @@
                 font-weight: bold;
                 &:after {
                     display: none;
+                }
+                @include media-breakpoint-down(xs) {
+                    font-size: 30px;
+                    margin-bottom: $spacing-lg;
                 }
             }
             .nav-column {
@@ -409,11 +423,18 @@
                         margin-right: $spacing-sm;
                         display: flex;
                         align-items: center;
+                        @include media-breakpoint-down(xs) {
+                            width: 32px;
+                            height: 32px;
+                        }
                     }
                     .nav-full-link {
                         font-weight: bold;
                         font-size: 28.3497px;
                         line-height: 50px;
+                        @include media-breakpoint-down(xs) {
+                            font-size: 20px;
+                        }
                     }
                 }
             }
