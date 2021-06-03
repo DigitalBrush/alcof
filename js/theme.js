@@ -7133,6 +7133,25 @@ jQuery(function ($) {
       }
     }
   });
+  $('.location-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1,
+        nav: false
+      },
+      1000: {
+        items: 1,
+        nav: true,
+        loop: false
+      }
+    }
+  });
   $("#homeModal").modal('show');
 
   if (window.matchMedia("(max-width: 767px)").matches) {

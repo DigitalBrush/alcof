@@ -111,7 +111,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<div class="marques-assurance">
 									<div class="row row-assurance">
 										<div class="col-sm-3">
-											<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logos/logo-axa.png" class="img-fluid">
+											<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logos/logo-AXA.png" class="img-fluid">
 										</div>
 										<div class="col-sm-3">
 											<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logos/logo-inter-mutuelles-assistance.png" class="img-fluid">

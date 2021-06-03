@@ -67,7 +67,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		</div>
     <div class="text-center">
-				<a class="btn btn-lg btn-secondary" href="">Voir plus de catégories (12)</a>
+				<a class="btn btn-lg btn-secondary" href="<?php echo esc_url(home_url('produits')); ?>">Voir plus de catégories (12)</a>
 			</div>
 	</div>
 </div>
