@@ -444,6 +444,24 @@
     }
 }
 
+.section {
+    &.accessories {
+        .card {
+            border-radius: none;
+            margin-bottom: $spacing-md;
+            border: 0;
+            .card-header {
+                padding: .5rem 1.25rem;
+                margin-bottom: 0;
+                background-color: $alcof-border-color;
+                border-radius: none;
+                border: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
 .woocommerce-products-header {
     display: none;
 }

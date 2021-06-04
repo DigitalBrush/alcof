@@ -57,6 +57,7 @@ get_header( 'shop' ); ?>
 	?>
 
 <?php
+get_template_part( 'global-templates/products-accessories' );
 get_template_part( 'global-templates/contact' );
 get_template_part( 'global-templates/related-products' );
 get_footer( 'shop' );
