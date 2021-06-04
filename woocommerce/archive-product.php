@@ -115,6 +115,7 @@ do_action( 'woocommerce_before_main_content' );
 
 
 <?php
+get_template_part( 'global-templates/products-accessories' );
 get_template_part( 'global-templates/contact' );
 get_template_part( 'global-templates/categories-other' );
 get_footer();

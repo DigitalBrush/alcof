@@ -150,15 +150,14 @@ h6 {
 		background-color: $alcof-dark;
 		border: 0;
 		position: relative;
-		padding-left: $spacing-max;
-
+		padding: $spacing $spacing-md $spacing $spacing-max;
 		&:before {
-		position: absolute;
-		content: "";
-		width: 20px;
-		height: 2px;
-		left: $spacing-md;
-		background: $white;
+			position: absolute;
+			content: "";
+			width: 20px;
+			height: 2px;
+			left: $spacing-md;
+			background: $white;
 		}
 		&.no-dash {
 			&:before {
