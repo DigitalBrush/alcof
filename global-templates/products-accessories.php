@@ -11,14 +11,14 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 	?>
 
-<div class="section section-accessories">
+<div class="section accessories">
 	<div class="container-fluid" id="wrapper-static-content" tabindex="-1"  >
 		<div class="container">
 			<div id="accordionstore">
 				<div class="card">
 					<div class="card-header" id="headingOne">
 					<h5 class="mb-0">
-						<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						<button class="btn btn-teg" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 						Accessoires
 						</button>
 					</h5>
@@ -34,7 +34,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="card">
 					<div class="card-header" id="headingTwo">
 					<h5 class="mb-0">
-						<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						<button class="btn btn-tag collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 						Options
 						</button>
 					</h5>

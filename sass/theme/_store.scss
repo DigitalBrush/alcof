@@ -455,10 +455,9 @@
     }
 }
 
-<<<<<<< Updated upstream
-=======
 .section {
     &.accessories {
+        padding-top: 0;
         .card {
             border-radius: none;
             margin-bottom: $spacing-md;
@@ -492,7 +491,6 @@
     }
 }
 
->>>>>>> Stashed changes
 .woocommerce-products-header {
     display: none;
 }
