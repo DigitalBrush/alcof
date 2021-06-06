@@ -1,0 +1,26 @@
+.alcof-reviews {
+    .wprs_unslider {
+        .wprev-slider {
+            .wprevpro_t1_outer_div {
+                .wprevpro_t1_DIV_1 {
+                    .wprevpro_t1_DIV_2 {
+                        background: $alcof-grey;
+                        box-shadow: initial !important;
+                        border-radius: $spacing-xs !important;
+                        &:after {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+        }
+        .wprs_unslider-arrow {
+            &.prev {
+                left: 0;
+            }
+            &.next {
+                right: 0;
+            }
+        }
+    }
+}

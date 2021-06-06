@@ -96,6 +96,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 							</div>
 
+							<div class="col-sm-12">
+								<div class="alcof-reviews">
+									<?php  do_action( 'wprev_pro_plugin_action', 1 );  ?>
+								</div>
+							</div>
+
 							<div class="col-sm-8">
 								<div class="content-block start">
 
