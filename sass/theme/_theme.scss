@@ -1095,7 +1095,7 @@ h6 {
 				display: flex;
 				justify-content: flex-start;
 				align-items: center;
-				.inno-col {
+				.inner-col {
 					margin-bottom: $spacing-big;
 				}
 				h2 {
@@ -1394,7 +1394,7 @@ h6 {
   }
 
   .services-investment {
-	padding: 400px 0 100px;
+	padding: 400px 0 0;
 	background: url(../img/vault-dark-bg-web.jpg);
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -1407,7 +1407,9 @@ h6 {
 	.investment-content {
 	  display: flex;
 	  justify-content: center;
-
+	  	.inner-col {
+			margin-bottom: $spacing-big;
+		}
 	  h2 {
 		padding: 0;
 
