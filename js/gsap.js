@@ -20,7 +20,7 @@ window.addEventListener("load", function (e) {
 			gsap.utils.toArray(headerImagesSelector).forEach((header, _) => {
 				gsap.from(header, {
 					y: -400,
-					ScrollTrigger: header,
+					scrollTrigger: header,
 				});
 			})
 		})
@@ -82,6 +82,10 @@ window.addEventListener("load", function (e) {
 			})
 		})
 	}
+
+	$('.alcof-tabs p').each(function() {
+		animateParagraphs.kill();
+	});
 
 
 	const animateGalleryItems = () => {

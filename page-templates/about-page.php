@@ -45,9 +45,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			</div><!-- #primary -->
 			<?php
-						get_template_part( 'global-templates/about-contact' );
-						get_template_part( 'global-templates/about-innovation' );
-					?>
+				get_template_part( 'global-templates/about-contact' );
+				get_template_part( 'global-templates/about-innovation' );
+				get_template_part( 'global-templates/about-certifications' );
+			?>
 
 	</div><!-- #content -->
 

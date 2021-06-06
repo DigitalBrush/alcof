@@ -131,6 +131,17 @@
                         display: none;
                     }
                 }
+                h4 {
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    margin: $spacing-lg 0 0;
+                    padding: 0 0 $spacing-sm 0;
+                    &:after {
+                        display: none;
+                    }
+                }
                 .woocommerce-product-attributes {
                     .woocommerce-product-attributes-item {
                         border: 0;
@@ -446,6 +457,7 @@
 
 .section {
     &.accessories {
+        padding-top: 0;
         .card {
             border-radius: none;
             margin-bottom: $spacing-md;
@@ -457,6 +469,24 @@
                 border-radius: none;
                 border: 0;
                 padding: 0;
+                position: relative;
+                button {
+                    width: 100%;
+                    justify-content: flex-start;
+                    text-decoration: none;
+                    margin: 0;
+                    &:after {
+                        position: absolute;
+                        content: '\e5cf';
+                        font-family: 'Material Icons';
+                        -webkit-font-feature-settings: 'liga';
+                        font-size: 20px;
+                        right: 24px;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                
             }
         }
     }

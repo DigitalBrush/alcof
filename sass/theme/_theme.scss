@@ -188,23 +188,60 @@ h6 {
   overflow: hidden;
 }
 
+.alcof-tabs {
+	.nav-tabs {
+		.nav-item {
+			margin-right: $spacing-xs;
+			.nav-link {
+				border: 0;
+				border-radius: 0;
+				&.btn-tag {
+					padding: $spacing $spacing-md $spacing $spacing-max;
+					margin: 0 !important;
+					position: relative;
+					&:before {
+						position: absolute;
+						content: "";
+						width: 20px;
+						height: 2px;
+						left: $spacing-md;
+						background: $alcof-charcoal;
+					}
+				}
+				&.active {
+					color: $white !important;
+					background-color: $alcof-dark;
+					&:before {
+						background: $white !important;
+					}
+				}
+			}
+		}
+	}
+	.tab-content {
+		padding: $spacing-lg 0;
+		border-bottom: 1px solid $alcof-border-color;
+	}
+}
+
 
 .section {
-  padding: 100px 0;
-  @include media-breakpoint-down(xs) {
-	padding: 60px 0;
-  }
-
-  &.dark {
-	background: $alcof-dark;
-	color: $white;
-
-	&.negative-margin {
-	  @include media-breakpoint-up(md) {
-		margin-top: -200px;
-	  }
+	padding: 100px 0;
+	@include media-breakpoint-down(xs) {
+		padding: 60px 0;
 	}
-  }
+
+	&.dark {
+		background: $alcof-dark;
+		color: $white;
+
+		
+	}
+	&.negative-margin {
+		@include media-breakpoint-up(md) {
+		margin-top: -100px;
+		}
+	}
 }
 
 .contact-cta {
@@ -260,6 +297,10 @@ h6 {
 			}
 		}
   	}
+}
+
+.section-accessories {
+	padding-top: 0;
 }
 
 .section-reputation {
@@ -851,6 +892,7 @@ h6 {
 
 .about-page {
 	.page-header {
+		padding-bottom: 0;
 		.header-row {
 			position: relative;
 			.header-text {
@@ -911,10 +953,37 @@ h6 {
 			}
 			
 		}
-  }
+		.about-border {
+			position: relative;
+			height: $spacing-big;
+			.about-border-left {
+				height: 100%;
+				&:after {
+					content:'';
+					position: absolute;
+					background-color: $alcof-dark;
+					width: 6px;
+					height: 100%;
+					bottom: 0;
+					left: 0; 
+				}
+			}
+		}
+  	}
 
-  .content-area {
+  	.content-area {
 		padding: 100px 0;
+		padding-left: $spacing-big;
+		position: relative;
+		&:after {
+			content:'';
+			position: absolute;
+			background-color: $alcof-border-color;
+			width: 2px;
+			height: 100%;
+			bottom: 0;
+			left: 0; 
+		}
 		.entry-content {
 			h6 {
 				position: relative;
@@ -930,88 +999,265 @@ h6 {
 				}
 			}
 		}
-  }
+  	}
 
+	.contact-groupe {
+		padding: 0;
+		.about-contact-block {
+			padding-left: $spacing-big;
+			position: relative;
+			&:after {
+				content:'';
+				position: absolute;
+				background-color: $primary;
+				width: 6px;
+				height: 100%;
+				bottom: 0;
+				left: 0; 
+			}
+			.about-contact {
+			  .block-left {
+				position: relative;
+				background-image: url(../img/section-besoin-d-aide-web-reverse.jpg);
+				background-size: contain;
+				background-repeat: no-repeat;
+				padding-top: 50px;
+				min-height: 500px;
+				margin-left: -100px;
+				@include media-breakpoint-down(sm) {
+				  margin-left: 0;
+				  min-height: 250px;
+				}
+		
+				.block-left-content {
+				  padding-left: 300px;
+				  @include media-breakpoint-down(sm) {
+					padding-left: 50px;
+				  }
+		
+				  .heavy-weight {
+					font-size: 200px;
+					font-weight: 900;
+					margin: 0;
+					padding: 0;
+					@include media-breakpoint-down(sm) {
+					  font-size: 60px;
+					}
+		
+					&:after {
+					  display: none;
+					}
+				  }
+				}
+		
+				.block-left-cta {
+				  position: absolute;
+				  bottom: -40px;
+				  left: 300px;
+				  @include media-breakpoint-down(sm) {
+					padding-left: 50px;
+				  }
+				}
+			  }
+		
+			  .block-right {
+				padding-top: 100px;
+				display: flex;
+				align-items: center;
+			  }
+			}
+		  }
+	}
+  
 
-  .about-contact-block {
-	.about-contact {
-	  .block-left {
-		position: relative;
-		background-image: url(../img/section-besoin-d-aide-web-reverse.jpg);
+  	.about-innovation {
+		padding: 0;
+		background: url(../img/vault-dark-bg-web.jpg);
 		background-size: contain;
 		background-repeat: no-repeat;
-		padding-top: 50px;
-		min-height: 500px;
-		margin-left: -100px;
+		background-position: bottom;
 		@include media-breakpoint-down(sm) {
-		  margin-left: 0;
-		  min-height: 250px;
+			padding: 100px 0 50px;
 		}
-
-		.block-left-content {
-		  padding-left: 250px;
-		  @include media-breakpoint-down(sm) {
-			padding-left: 50px;
-		  }
-
-		  .heavy-weight {
-			font-size: 200px;
-			font-weight: 900;
-			margin: 0;
-			padding: 0;
-			@include media-breakpoint-down(sm) {
-			  font-size: 60px;
-			}
-
+		.innovation-block {
+			padding: $spacing-big 0 0 $spacing-big;
+			position: relative;
 			&:after {
-			  display: none;
+				content:'';
+				position: absolute;
+				background-color: $alcof-charcoal;
+				width: 2px;
+				height: 100%;
+				bottom: 0;
+				left: 0; 
 			}
-		  }
+			.innovation-content {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				.inner-col {
+					margin-bottom: $spacing-big;
+				}
+				h2 {
+					padding: 0;
+	
+					&:after {
+					display: none;
+					}
+				}
+	
+				.pretitle {
+					padding: $spacing-lg 0;
+				}
+			}
 		}
-
-		.block-left-cta {
-		  position: absolute;
-		  bottom: -40px;
-		  left: 100px;
-		}
-	  }
-
-	  .block-right {
-		padding-top: 100px;
-		display: flex;
-		align-items: center;
-	  }
-	}
-  }
-
-  .about-innovation {
-	padding: 400px 0 100px;
-	background: url(../img/vault-dark-bg-web.jpg);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: bottom;
-	@include media-breakpoint-down(sm) {
-	  padding: 100px 0 50px;
 	}
 
-	.innovation-content {
-	  display: flex;
-	  justify-content: center;
-
-	  h2 {
+	.about-certification {
 		padding: 0;
-
-		&:after {
-		  display: none;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: bottom;
+		@include media-breakpoint-down(sm) {
+			padding: 100px 0 50px;
 		}
-	  }
-
-	  .pretitle {
-		padding: $spacing-lg 0;
-	  }
+		.cert-stat-block {
+			background: linear-gradient($alcof-dark 67%, $white 33%);
+			.certification-header {
+				padding: 0 0 0 $spacing-big;
+				.certification-content {
+				}
+			}
+		}
+		.certification-header {
+			padding: $spacing-max 0 0 $spacing-big;
+			position: relative;
+			&:after {
+				content:'';
+				position: absolute;
+				background-color: $primary;
+				width: 6px;
+				height: 100%;
+				bottom: 0;
+				left: 0; 
+			}
+			.certification-content {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				.cert-stat {
+					display: flex;
+					align-items: stretch;
+					.cert-left {
+						display: flex;
+						align-items: center;
+					}
+					.cert-right {
+						display: flex;
+						align-items: center;
+						.pretitle {
+							padding: $spacing-sm 0;
+							position: relative;
+							color: $white;
+							&:after {
+								position: absolute;
+								content: "";
+								width: 30px;
+								height: 3px;
+								top: 0;
+								left: 0;
+								background: $primary;
+							}
+						}
+					}
+				}
+				.heavy-weight {
+					font-size: 200px;
+					font-weight: 900;
+					margin: 0 $spacing-lg 0 0;
+					padding: 0;
+					color: $white;
+					mix-blend-mode: difference;
+					@include media-breakpoint-down(sm) {
+					  font-size: 60px;
+					}
+					&:after {
+					  display: none;
+					}
+				}
+				.light-weight {
+					padding: 0;
+					&:after {
+					  display: none;
+					}
+				}
+				h2 {
+					padding: 0;
+					&:after {
+					display: none;
+					}
+				}
+	
+				.pretitle {
+					padding: $spacing-lg 0;
+				}
+			}
+		}
+		.certification-block {
+			padding: $spacing-max 0 0 $spacing-big;
+			position: relative;
+			&:after {
+				content:'';
+				position: absolute;
+				background-color: $alcof-border-color;
+				width: 2px;
+				height: 100%;
+				bottom: 0;
+				left: 0; 
+			}
+			.certification-content {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				
+				.heavy-weight {
+					font-size: 200px;
+					font-weight: 900;
+					margin: 0;
+					padding: 0;
+					@include media-breakpoint-down(sm) {
+					  font-size: 60px;
+					}
+		
+					&:after {
+					  display: none;
+					}
+				}
+				h6 {
+					margin-bottom: $spacing-lg;
+					position: relative;
+					padding: $spacing-sm 0;
+					&:after {
+						position: absolute;
+						content: "";
+						width: 30px;
+						height: 3px;
+						bottom: 0;
+						left: 0;
+						background: $primary;
+					  }
+				}
+	
+				.pretitle {
+					padding: $spacing-lg 0;
+				}
+			}
+		}
 	}
-  }
 }
+
+
+
 
 .services-page {
   .page-header {
@@ -1148,7 +1394,7 @@ h6 {
   }
 
   .services-investment {
-	padding: 400px 0 100px;
+	padding: 400px 0 0;
 	background: url(../img/vault-dark-bg-web.jpg);
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -1161,7 +1407,9 @@ h6 {
 	.investment-content {
 	  display: flex;
 	  justify-content: center;
-
+	  	.inner-col {
+			margin-bottom: $spacing-big;
+		}
 	  h2 {
 		padding: 0;
 

@@ -13,6 +13,7 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
+<?php if ( ! is_page('services') ) { ?>
 <div class="footer-cta" id="wrapper-footer">
 	<div class="<?php echo esc_attr( $container ); ?>">
 		<div class="row d-flex justify-content-center">
@@ -26,6 +27,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</div><!-- row end -->
 	</div><!-- row end -->
 </div>
+
+<?php }?>
 
 <?php get_template_part( 'global-templates/fullscreen-menu' ); ?>
 
