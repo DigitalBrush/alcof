@@ -13,10 +13,25 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="section negative-margin">
 	<div class="container-fluid about-certification" tabindex="-1">
+		<div class="container-fluid cert-stat-block">
+			<div class="container certification-header">
+				<div class="row certification-content"> 
+					<div class="col-md-8">			
+						<div class="row cert-stat">
+							<div class="cert-left">
+								<h1 class="heavy-weight">35</h1>
+							</div>
+							<div class="cert-right">
+								<p class="pretitle">Techniciens à votre service.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="container certification-header">
 			<div class="row certification-content"> 
-				<div class="col-md-8 mb-5">
-					<h1 class="heavy-weight">35</h1>
+				<div class="col-md-8">			
 					<h1 class="light-weight">Certifiés pour les meilleurs gages de qualité.</h1>
 				</div>
 			</div>

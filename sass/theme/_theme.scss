@@ -892,6 +892,7 @@ h6 {
 
 .about-page {
 	.page-header {
+		padding-bottom: 0;
 		.header-row {
 			position: relative;
 			.header-text {
@@ -951,6 +952,22 @@ h6 {
 				}
 			}
 			
+		}
+		.about-border {
+			position: relative;
+			height: $spacing-big;
+			.about-border-left {
+				height: 100%;
+				&:after {
+					content:'';
+					position: absolute;
+					background-color: $alcof-dark;
+					width: 6px;
+					height: 100%;
+					bottom: 0;
+					left: 0; 
+				}
+			}
 		}
   	}
 
@@ -1078,7 +1095,9 @@ h6 {
 				display: flex;
 				justify-content: flex-start;
 				align-items: center;
-				
+				.inno-col {
+					margin-bottom: $spacing-big;
+				}
 				h2 {
 					padding: 0;
 	
@@ -1102,6 +1121,14 @@ h6 {
 		@include media-breakpoint-down(sm) {
 			padding: 100px 0 50px;
 		}
+		.cert-stat-block {
+			background: linear-gradient($alcof-dark 67%, $white 33%);
+			.certification-header {
+				padding: 0 0 0 $spacing-big;
+				.certification-content {
+				}
+			}
+		}
 		.certification-header {
 			padding: $spacing-max 0 0 $spacing-big;
 			position: relative;
@@ -1118,11 +1145,39 @@ h6 {
 				display: flex;
 				justify-content: flex-start;
 				align-items: center;
+				.cert-stat {
+					display: flex;
+					align-items: stretch;
+					.cert-left {
+						display: flex;
+						align-items: center;
+					}
+					.cert-right {
+						display: flex;
+						align-items: center;
+						.pretitle {
+							padding: $spacing-sm 0;
+							position: relative;
+							color: $white;
+							&:after {
+								position: absolute;
+								content: "";
+								width: 30px;
+								height: 3px;
+								top: 0;
+								left: 0;
+								background: $primary;
+							}
+						}
+					}
+				}
 				.heavy-weight {
 					font-size: 200px;
 					font-weight: 900;
-					margin: 0;
+					margin: 0 $spacing-lg 0 0;
 					padding: 0;
+					color: $white;
+					mix-blend-mode: difference;
 					@include media-breakpoint-down(sm) {
 					  font-size: 60px;
 					}
@@ -1131,6 +1186,7 @@ h6 {
 					}
 				}
 				.light-weight {
+					padding: 0;
 					&:after {
 					  display: none;
 					}
@@ -1163,6 +1219,7 @@ h6 {
 				display: flex;
 				justify-content: flex-start;
 				align-items: center;
+				
 				.heavy-weight {
 					font-size: 200px;
 					font-weight: 900;
