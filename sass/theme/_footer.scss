@@ -76,6 +76,15 @@
             }
         }
     }
+    .social-icons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .mdi {
+            font-size: 36px;
+            margin-right: $spacing;
+        }
+    }
 }
 
 .footer-bottom {
@@ -84,6 +93,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 14px;
+    
     .site-footer {
         .site-info {
             text-align: right;
