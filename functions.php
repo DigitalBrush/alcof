@@ -143,10 +143,10 @@ function my_acf_admin_enqueue_scripts($hook_suffix) {
 add_filter( 'woocommerce_is_sold_individually', '__return_true' );
 
 function theme_gsap_script() {
-    wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js', array(), false, true );
+    wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js', array('jquery'), false, true );
     wp_enqueue_script( 'gsap-scrollTrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js', array(), false, true );
     wp_enqueue_script( 'gsap-scrollTo', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js', array(), false, true );
-    wp_enqueue_script( 'gsap-custom', get_template_directory_uri() . '/js/gsap.js', array(), false, true );
+    wp_enqueue_script( 'gsap-custom', get_template_directory_uri() . '/js/gsap.js', array('jquery'), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'theme_gsap_script' );
 

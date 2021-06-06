@@ -11,9 +11,9 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 	?>
 
-<div class="section dark negative-margin">
+<div class="section dark negative-margin pb-0">
 	<div class="container-fluid about-innovation" tabindex="-1">
-		<div class="container">
+		<div class="container innovation-block">
 			<div class="row innovation-content">
 				<div class="col-md-8">
 					<div class="row"> 
