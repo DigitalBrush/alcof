@@ -33,7 +33,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						
 							<div class="row accessory-gallery">
 								<?php foreach( $images as $image_id ): ?>
-									<div class="col">
+									<div class="col-sm-3">
 										<?php echo wp_get_attachment_image( $image_id, $size ); ?>
 									</div>
 								<?php endforeach; ?>
