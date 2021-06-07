@@ -33,6 +33,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                            'taxonomy'     => $taxonomy,
                            'orderby'      => $orderby,
                            'number'       => 4,
+                           'parent'       => 0,
                            'show_count'   => $show_count,
                            'pad_counts'   => $pad_counts,
                            'hierarchical' => $hierarchical,

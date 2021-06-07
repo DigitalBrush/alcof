@@ -22,14 +22,15 @@ $container = get_theme_mod( 'understrap_container_type' );
                     $orderby      = 'menu_order';
                     $show_count   = 0;      // 1 for yes, 0 for no
                     $pad_counts   = 0;      // 1 for yes, 0 for no
-                    $hierarchical = 1;      // 1 for yes, 0 for no
+                    $hierarchical = 0;      // 1 for yes, 0 for no
                     $title        = '';
                     $empty        = 1;
 
                     $args = array(
                             'taxonomy'     => $taxonomy,
                             'orderby'      => $orderby,
-                            'number'       => 4,
+                            'number'       => 3,
+                            'parent'       => 0,
                             'show_count'   => $show_count,
                             'pad_counts'   => $pad_counts,
                             'hierarchical' => $hierarchical,
@@ -67,7 +68,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		</div>
     <div class="text-center">
-				<a class="btn btn-lg btn-secondary" href="<?php echo esc_url(home_url('produits')); ?>">Voir plus de catégories (12)</a>
+				<a class="btn btn-lg btn-secondary" href="<?php echo esc_url(home_url('produits')); ?>">Voir plus de catégories</a>
 			</div>
 	</div>
 </div>

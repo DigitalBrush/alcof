@@ -18,6 +18,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 <?php if ( 'both' === $sidebar_pos ) : ?>
 	<div class="col-md-3 widget-area" id="left-sidebar" role="complementary">
+	<h4>Filtres</h4>
 <?php else : ?>
 	<div class="col-md-3 widget-area" id="left-sidebar" role="complementary">
 		<h4>Filtres</h4>

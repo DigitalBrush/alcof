@@ -32,13 +32,14 @@ $container = get_theme_mod( 'understrap_container_type' );
                     $orderby      = 'menu_order';
                     $show_count   = 0;      // 1 for yes, 0 for no
                     $pad_counts   = 0;      // 1 for yes, 0 for no
-                    $hierarchical = 1;      // 1 for yes, 0 for no
+                    $hierarchical = 0;      // 1 for yes, 0 for no
                     $title        = '';
                     $empty        = 1;
 
                     $args = array(
                            'taxonomy'     => $taxonomy,
                            'orderby'      => $orderby,
+                           'parent'       => 0,
                            'show_count'   => $show_count,
                            'number'       => 5,
                            'pad_counts'   => $pad_counts,
@@ -53,25 +54,25 @@ $container = get_theme_mod( 'understrap_container_type' );
                           $category_id = $cat->term_id; ?>
 
 
-				<div class="col-md-4 col-sm-6">
-					<div class="category-block">
+                    <div class="col-md-4 col-sm-6">
+                      <div class="category-block">
 
-            <div class="category-image animated-category-image">
-              <?php
-                $thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );
-                $image = wp_get_attachment_url( $thumbnail_id );
-                $link = get_term_link( (int)$cat->term_id, 'product_cat' );
-              ?>
-              <a class="cat-image" href="<?php echo $link; ?>"><img src="<?php echo $image; ?>"></a>
-					  </div>
+                        <div class="category-image animated-category-image">
+                          <?php
+                            $thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );
+                            $image = wp_get_attachment_url( $thumbnail_id );
+                            $link = get_term_link( (int)$cat->term_id, 'product_cat' );
+                          ?>
+                          <a class="cat-image" href="<?php echo $link; ?>"><img src="<?php echo $image; ?>"></a>
+                        </div>
 
-						<div class="category-inner">
-							<h4 class="category-title"><a href="<?php echo $link; ?>"><?php echo $cat->name; ?></a></h4>
-              <h6 class="product-count"><?php echo $cat->count; ?> Produits</h6>
-							<p><?php echo $cat->description; ?></p>
-						</div>
+                        <div class="category-inner">
+                          <h4 class="category-title"><a href="<?php echo $link; ?>"><?php echo $cat->name; ?></a></h4>
+                          <h6 class="product-count"><?php echo $cat->count; ?> Produits</h6>
+                          <p><?php echo $cat->description; ?></p>
+                        </div>
 
-				  	</div>
+                        </div>
                 </div>
                   <?php
 
