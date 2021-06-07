@@ -1,6 +1,69 @@
 #left-sidebar {
     &.widget-area {
         padding: 0;
+        h4 {
+            padding-bottom: $spacing;
+            margin-bottom: $spacing-md;
+            &:after {
+                position: absolute;
+                content: "";
+                width: 30px;
+                height: 3px;
+                top: initial;
+                bottom: 0;
+                left: 0;
+                background: $primary;
+                margin: 0;
+              }
+        }
+        h3 {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 12px 0;
+            padding: 0;
+            &:after {
+                display: none;
+            }
+        }
+        .berocket_single_filter_widget {
+            margin-bottom: $spacing-sm;
+            padding-bottom: $spacing;
+            border-bottom: 1px solid $alcof-border-color;
+            .bapf_sfilter {
+                .bapf_body {
+                    ul {
+                        padding: 0;
+                        li {
+                            label {
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+                input[type=checkbox] {
+                    background: $alcof-grey;
+                    border: 2px solid $alcof-border-color;
+                    box-sizing: border-box;
+                    border-radius: 1px;
+                    width: 13px;
+                    height: 13px;
+                    margin-right: $spacing;
+                    &:checked {
+                        background: $primary;
+                        border: 0;
+                    }
+                }
+            }
+        }
+        .widget_product_search {
+            .input-group {
+                .form-control {
+                    width: 100%;
+                }
+            }
+        }
         .widget {
             .widget-title {
                 padding: 0 0 $spacing 0;

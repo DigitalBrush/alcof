@@ -1,8 +1,10 @@
 .alcof-reviews {
+    font-family: $body-font;
     .wprs_unslider {
         .wprev-slider {
             .wprevpro_t1_outer_div {
                 .wprevpro_t1_DIV_1 {
+                    font-family: $body-font;
                     .wprevpro_t1_DIV_2 {
                         background: $alcof-grey;
                         box-shadow: initial !important;
@@ -10,6 +12,16 @@
                         &:after {
                             display: none !important;
                         }
+                    }
+                    .wprevpro_t1_SPAN_5 {
+                        text-transform: capitalize;
+                        color: $alcof-dark;
+                        font-weight: 700;
+                        .wprev_showdate_T1 {
+                            color: $alcof-charcoal;
+                            font-weight: 500;
+                        }
+
                     }
                 }
             }

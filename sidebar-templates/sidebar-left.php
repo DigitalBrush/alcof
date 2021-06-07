@@ -20,6 +20,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 	<div class="col-md-3 widget-area" id="left-sidebar" role="complementary">
 <?php else : ?>
 	<div class="col-md-3 widget-area" id="left-sidebar" role="complementary">
+		<h4>Filtres</h4>
 <?php endif; ?>
 <?php dynamic_sidebar( 'left-sidebar' ); ?>
 
