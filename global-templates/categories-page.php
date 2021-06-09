@@ -35,6 +35,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                     $hierarchical = 0;      // 1 for yes, 0 for no
                     $title        = '';
                     $empty        = 1;
+                    $allowed = array(62,61,34,33,32);
 
                     $args = array(
                            'taxonomy'     => $taxonomy,
@@ -46,6 +47,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                            'hierarchical' => $hierarchical,
                            'title_li'     => $title,
                            'hide_empty'   => true,
+                           'include'      => $allowed,
                     );
                    $all_categories = get_categories( $args );
 
