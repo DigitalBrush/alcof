@@ -38,7 +38,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                            'pad_counts'   => $pad_counts,
                            'hierarchical' => $hierarchical,
                            'title_li'     => $title,
-                           'hide_empty'   => true
+                           'hide_empty'   => true,
                     );
                    $all_categories = get_categories( $args );
 
