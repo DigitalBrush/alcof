@@ -21,7 +21,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="row category-section">
         <div class="col-md-4 col-sm-6 d-none d-md-block" id="searchdiv">
           <div class="category-search">
-            <a href="<?php echo esc_url(home_url('#')); ?>" class="btn btn-lg btn-primary"><span class="material-icons">search</span>Rechercher</a>
+            <?php echo do_shortcode( '[fibosearch]' ); ?>
             <h6 class="left-dash">parmi 360 références</h6>
           </div>
         </div>
