@@ -83,7 +83,7 @@ window.addEventListener("load", function (e) {
 		})
 	}
 
-	$('.alcof-tabs p').each(function() {
+	jQuery('.alcof-tabs p').each(function() {
 		animateParagraphs.kill();
 	});
 

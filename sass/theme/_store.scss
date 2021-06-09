@@ -43,7 +43,7 @@
                 height: 100%;
                 img {
                     width: auto;
-                    height: 100%;
+                    height: auto;
                     margin: 0 auto;
                     object-fit: cover;
                 }
@@ -53,6 +53,11 @@
                 height: 100%;
                 margin: 0 auto;
                 object-fit: cover;
+            }
+            .woocommerce-product-gallery__trigger {
+                #text {
+                    display: none;
+                }
             }
             .woocommerce-product-gallery__wrapper {
                 height: 100%;
