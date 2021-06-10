@@ -32,7 +32,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<a href="tel:0890102030" target="_blank" rel="noopener"><span class="material-icons">phone</span>01 45 85 78 96</a>
 								</div>
 
-								<h2>Serrurier Point Fort Fichet<br/>Paris 16</h2>
+								<h2>Serrurier Point Fort Fichet<br/>
+									<?php $boutique_titre = get_field('boutique_titre');  
+									if($boutique_titre)  { ?>
+										<?php echo $boutique_titre; ?>
+									<?php } ?>
+								
+								</h2>
 
 								<div class="body-tags">
 									<div class="btn btn-tag">
@@ -46,14 +52,30 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<div class="location-table">
 									<table class="woocommerce-product-attributes shop_attributes">
 										<tbody>
+
+											<?php $heures_en_semaine = get_field('heures_en_semaine');  
+											if($heures_en_semaine)  { ?>
 											<tr>
 												<th>Lundi-vendredi</th>
-												<td><p>8:00 - 19:00</p></td>
+												<td>
+													<p>
+														
+															<?php echo $heures_en_semaine; ?>
+														
+													</p>
+												</td>
 											</tr>
+											<?php } ?>
+
+											<?php $horaires_du_samedi = get_field('horaires_du_samedi');  
+											if($horaires_du_samedi)  { ?>
 											<tr>
 												<th>Samedi</th>
-												<td><p>9:00 - 18:00</p></td>
+												<td>
+													<p><?php echo $horaires_du_samedi; ?></p>
+												</td>
 											</tr>
+											<?php } ?>
 											<tr>
 												<th>Dimanche</th>
 												<td><p>Fermé sauf dépannage</p></td>
@@ -62,7 +84,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 									</table>
 								</div>
 
-								<p>Afin de vous sentir protéger dans votre appartement à Paris 16 et de vous prévenir contre les cambrioleurs et les effractions, nous vous conseillons l’installation de porte blindée Fichet. Que vous habitiez une maison ou un appartement, avec une porte Fichet, vous choisissez la haute sécurité pour votre maison. Certifiée A2P, la porte blindée Fichet est beaucoup plus durable qu'une porte conventionnelle car elle est équipée d'un bloc de porte avec un cadre en acier et une serrure multipoints. Avec ses cylindres métalliques et son blindage renforcé, la porte blindée Fichet est garantie antieffraction. Elle est ainsi beaucoup plus résistantes face aux cambriolages. Conçue pour votre confort, cette porte est dotée d'une isolation thermique et phonique. Alcof Sécurité vous recommande la pose de porte blindée</p>
+								<p><?php the_field('boutique_description'); ?></p>
 
 								<div class="number-body mt-5">
 									<a href="<?php echo esc_url(home_url('contact')); ?>" class="btn btn-lg btn-primary"><span class="material-icons">call</span>Contactez-nous</a>
@@ -71,27 +93,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<div class="col-sm-12">
 
 								<div class="location-gallery">
-									
-									<div class="row owl-carousel owl-theme location-carousel">
-										<div class="col-sm-12">
-											<div class="content-block">
-												<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/location-paris-16.png" class="img-fluid">
-											</div>
-										</div>
 
-										<div class="col-sm-12">
-											<div class="content-block">
-												<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/location-paris-16.png" class="img-fluid">
+									<?php $images = get_field('boutique_galerie');
+									if( $images ): ?>
+										<div class="row owl-carousel owl-theme location-carousel">
+											
+												<?php foreach( $images as $image ): ?>
+													<div class="col-sm-12">
+												<div class="content-block">
+												<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+														</div>
 											</div>
+												<?php endforeach; ?>
+												
 										</div>
+									<?php endif; ?>
 
-										<div class="col-sm-12">
-											<div class="content-block">
-												<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/location-paris-16.png" class="img-fluid">
-											</div>
-										</div>
-
-									</div>
 								</div>
 
 							</div>
@@ -105,15 +122,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<div class="col-sm-8">
 								<div class="content-block start">
 
-									<p>Si vous souhaitez renforcer encore la sécurité de votre habitation à Paris 16, nous disposons d'une large gamme de dispositifs de protection : rideaux métalliques, stores, volets roulants, coffres forts, alarmes électroniques, serrures de tous types et de toutes les marques, etc. Nos produits haute sécurité, répondent aux normes des certifications APSAD et NF SERVICE.</p>
-
-									<p>Les certifications APSAD sont des certifications de services. Elles sont attribuées à des entreprises dont la compétence et les moyens permettent d’offrir des prestations d’installation et de maintenance de qualité. La certification est délivrée après audits, contrôles de connaissances et vérifications en clientèle des prestations fournies. Des contrôles périodiques sont effectués pour son maintien. Dans le domaine de l’installation et de la maintenance des systèmes électroniques de sécurité, APSAD est délivrée conjointement avec la marque NF Service, attribuée par AFNOR Certification.</p>
+									<p><?php the_field ('boutique_paragraph_1'); ?></p>
 
 									<a href="<?php echo esc_url(home_url('contact')); ?>" class="btn btn-lg btn-primary mb-4"><span class="material-icons">description</span> obtenir un devis</a>
 
-									<p>Nous possédons également un service artisanal de reproduction de clés. Si votre porte est verrouillée de l’intérieur, faites appel à notre service et nous vous transmettrons un double des clés. </p>
-
-									<p>Alcof Sécurité, en tant que serrurier professionnel, vous propose un service de dépannage serrurier d'urgence si vous avez un problème pour ouvrir votre porte. Suite à votre appel, nos agents de dépannage interviennent rapidement et sont en mesure de faire face à toutes les situations : serrure et cylindre cassés, porte claquée, porte bloquée, clé perdue. De la cueillette au déverrouillage en passant par la reproduction des clés, notre service de dépannage rapide vous offrira la solution qui vous convient le mieux. </p>
+									<p><?php the_field ('boutique_paragraph_2'); ?></p>
 
 								</div>
 							</div>
@@ -134,13 +147,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 							<div class="col-sm-8">
 								<div class="content-block last">
-									<h3>Alcof Sécurité, tout pour votre sécurité, 59 avenue des Ternes, anciennement Ternes Protection.</h3>
+									<h3><?php the_field ('boutique_historie_titre'); ?></h3>
 
-									<p>Depuis 1985, le groupe Alcof est engagé dans l’aventure de la sécurité. Nous vous assurons un travail de qualité dans la sécurisation de votre logement ou entreprise mais aussi dans l’intervention rapide en cas de dépannage.</p>
-
-									<p>Spécialiste en serrure, porte blindée haute sécurité, sur Paris 17 et en Île-de-France, nous intervenons 24h/24 et 7J/7 pour toute demande de dépannage serrurerie, remplacement de serrure, ouverture de porte.</p>
-
-									<p>Si vous désirez obtenir des renseignements supplémentaires sur nos systèmes de sécurité, notre service de dépannage d’urgence, ou que vous souhaitez obtenir un audit sécurité appelez nous.</p>
+									<p><?php the_field ('boutique_historie'); ?></p>
 
 									<div class="contact-info">
 										<div class="d-block">
