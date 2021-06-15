@@ -1397,9 +1397,9 @@ h6 {
   .services-contact-block {
 	.services-contact {
 	  .block-left {
-		background-image: url(../img/repair-man-dark-bg_long.jpg);
+		background-image: url(../img/section-professionals.jpg);
 		background-position: 220px top;
-		background-size: contain;
+		background-size: cover;
 		min-height: 900px;
 		background-repeat: no-repeat;
 		padding-top: 100px;
@@ -1410,7 +1410,7 @@ h6 {
 
 		.light-weight {
 		  color: transparent;
-		  background: linear-gradient(to right, $alcof-dark 0%, $alcof-dark 25%, $white 25.01%, $white 100%);
+		  background: linear-gradient(to right, $alcof-dark 0%, $alcof-dark 30%, $white 30.01%, $white 100%);
 		  -webkit-background-clip: text;
 
 		  &:after {
