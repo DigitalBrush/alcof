@@ -427,7 +427,17 @@ h6 {
 
 .page-header {
   padding: 100px 0;
-
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: linear-gradient(to right, $black 30%, transparent);
+		opacity: .9; 
+	}
   .header-text {
 	.big-heading {
 	  padding: 0 0 $spacing-lg 0;
@@ -1302,19 +1312,6 @@ h6 {
 
 
 .services-page {
-  .page-header {
-	.header-row {
-	  position: relative;
-
-	  .header-text {
-		color: $alcof-dark;
-
-		.headline {
-		  color: $alcof-dark;
-		}
-	  }
-	}
-  }
 
   .services-slider {
 	@include media-breakpoint-up(lg) {

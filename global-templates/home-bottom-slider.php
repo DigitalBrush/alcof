@@ -15,7 +15,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row hero-footer">
 			<div class="col-sm-6 hero-image">
 				<div class="slider-image animated-slider-image">
-					<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/home-bottom-slider.jpg" />
+					<img class="img-fluid" src="<?php the_field('locations_image', 'option'); ?>" />
 				</div>
 			</div>
 			<div class="col-sm-6 hero-text">
